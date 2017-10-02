@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">PideseloAJaime</string>
+    <string name="title_activity__side_bar">Activity_SideBar</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="tienda_txt">Tienda</string>
+    <string name="mi_carrito_txt">Mi Carrito</string>
+    <string name="mis_pedidos_txt">Mis Pedidos</string>
+    <string name="mi_cuenta_txt">Mi Cuenta</string>
+    <string name="cerrar_sesion_txt">Cerrar Sesión</string>
 </resources>

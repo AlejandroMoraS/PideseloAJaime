@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ActivityMain">
+
+        </activity>
+        <activity
+            android:name=".Activity_SideBar"
+            android:label="@string/title_activity__side_bar"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
