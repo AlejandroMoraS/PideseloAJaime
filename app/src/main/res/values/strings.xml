@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">PideseloAJaime</string>
-    <string name="facebook_app_id">802977079873837</string>
-    <string name="sign_up_title">CREATE ACCOUNT</string>
-
     <string name="title_activity__side_bar">Activity_SideBar</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -22,5 +19,4 @@
     <string name="fragment_tab3">Paquetes</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
 </resources>
