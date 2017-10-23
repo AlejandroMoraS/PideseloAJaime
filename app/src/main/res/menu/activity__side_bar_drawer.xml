@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/sidebar_tienda"
+            android:icon="@drawable/icon_tienda"
+            android:title="@string/tienda_txt" />
+        <item
+            android:id="@+id/sidebar_miCarrito"
+            android:icon="@drawable/icon_mi_carrito"
+            android:title="@string/mi_carrito_txt" />
+        <item
+            android:id="@+id/sidebar_misPedidos"
+            android:icon="@drawable/icon_mis_pedidos"
+            android:title="@string/mis_pedidos_txt" />
+        <item
+            android:id="@+id/sidebar_miCuenta"
+            android:icon="@drawable/icon_mi_cuenta"
+            android:title="@string/mi_cuenta_txt" />
+
+        <item
+            android:id="@+id/sidebar_cerrarSesion"
+            android:icon="@drawable/icon_cerrar_sesion"
+            android:title="@string/cerrar_sesion_txt" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
