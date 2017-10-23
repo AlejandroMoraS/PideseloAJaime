@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PideseloAJaime</string>
+    <string name="facebook_app_id">802977079873837</string>
+    <string name="sign_up_title">CREATE ACCOUNT</string>
 </resources>
