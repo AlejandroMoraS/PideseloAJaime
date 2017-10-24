@@ -22,7 +22,7 @@ import android.view.MenuItem;
 import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
 
-public class Activity_SideBar extends AppCompatActivity
+public class ActivitySideBar extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar toolbar;

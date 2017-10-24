@@ -42,7 +42,7 @@ public class ActivityLogin extends AppCompatActivity {
     }
 
     private void goActivitySideBar() {
-        Intent intent = new Intent(this, Activity_SideBar.class);
+        Intent intent = new Intent(this, ActivitySideBar.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
