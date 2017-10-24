@@ -19,4 +19,9 @@
     <string name="fragment_tab3">Paquetes</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="facebook_app_id">802977079873837</string>
+    <string name="cancel_login">Inicio de sesión cancelado</string>
+    <string name="error_login">Error</string>
+
 </resources>

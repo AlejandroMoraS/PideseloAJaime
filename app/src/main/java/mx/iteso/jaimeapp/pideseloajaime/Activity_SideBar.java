@@ -1,5 +1,6 @@
 package mx.iteso.jaimeapp.pideseloajaime;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +19,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.facebook.AccessToken;
+import com.facebook.login.LoginManager;
+
 public class Activity_SideBar extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -30,6 +34,9 @@ public class Activity_SideBar extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__side_bar);
 
+        if(AccessToken.getCurrentAccessToken() == null) {
+            goLoginScreen();
+        }
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         viewPager = (ViewPager) findViewById(R.id.activity_main_viewpager);
@@ -51,6 +58,12 @@ public class Activity_SideBar extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    private void goLoginScreen() {
+        Intent intent = new Intent(this, ActivityLogin.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -60,7 +73,6 @@ public class Activity_SideBar extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -77,7 +89,7 @@ public class Activity_SideBar extends AppCompatActivity
         } else if (id == R.id.sidebar_miCuenta) {
 
         } else if (id == R.id.sidebar_cerrarSesion) {
-
+            logout();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -89,9 +101,14 @@ public class Activity_SideBar extends AppCompatActivity
         return true;
     }
 
+    public void logout() {
+        LoginManager.getInstance().logOut();
+        goLoginScreen();
+    }
+
     public class SectionAdapter extends FragmentPagerAdapter {
 
-        public SectionAdapter(FragmentManager fm) {
+        private SectionAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -107,7 +124,7 @@ public class Activity_SideBar extends AppCompatActivity
                 default:
                     return new FragmentComida();
             }
-        };
+        }
 
         @Override
         public int getCount() {
