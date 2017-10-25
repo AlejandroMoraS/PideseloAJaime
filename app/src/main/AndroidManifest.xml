@@ -18,17 +18,23 @@
             android:value="@string/facebook_app_id" />
 
         <activity android:name=".ActivityMain"></activity>
+
+        <activity android:name=".gui.ActivityTienda">
+
+        </activity>
         <activity
-            android:name=".ActivitySideBar"
-            android:label="@string/title_activity__side_bar"
+            android:name=".gui.ActivityNavigationDrawer"
+            android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".ActivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityLogin"></activity>
     </application>
 
 </manifest>

@@ -11,6 +11,8 @@ import com.facebook.FacebookException;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
+import mx.iteso.jaimeapp.pideseloajaime.gui.ActivityTienda;
+
 public class ActivityLogin extends AppCompatActivity {
 
     private LoginButton loginButton;
@@ -42,7 +44,7 @@ public class ActivityLogin extends AppCompatActivity {
     }
 
     private void goActivitySideBar() {
-        Intent intent = new Intent(this, ActivitySideBar.class);
+        Intent intent = new Intent(this, ActivityTienda.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
