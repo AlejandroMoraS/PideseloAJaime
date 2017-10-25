@@ -14,36 +14,39 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.facebook.login.LoginManager;
+
+import mx.iteso.jaimeapp.pideseloajaime.ActivityLogin;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-public abstract class ActivityBase extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-    protected Toolbar mToolbar;
-    protected String[] mActivitiesTitles;
-    protected DrawerLayout mDrawerLayout;
-    protected NavigationView mNavigationView;
-    protected ImageView mPhoto;
-    protected TextView mName;
-    protected TextView mCorreo;
-    protected View mNavHeader;
+public abstract class ActivityAbstract extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+    protected Toolbar toolbar;
+    protected String[] activityTitles;
+    protected DrawerLayout drawerLayout;
+    protected NavigationView navigationView;
+    protected ImageView userPicture;
+    protected TextView userName;
+    protected TextView userMail;
+    protected View navHeader;
 
     protected void onCreateDrawer(){
-        mActivitiesTitles = getResources().getStringArray(R.array.titles);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mNavigationView = (NavigationView) findViewById(R.id.nav_view);
-        mToolbar = (Toolbar) findViewById(R.id.toolbarBase);
-        setSupportActionBar(mToolbar);
+        activityTitles = getResources().getStringArray(R.array.titles);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        toolbar = (Toolbar) findViewById(R.id.toolbarBase);
+        setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, mDrawerLayout, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        mDrawerLayout.setDrawerListener(toggle);
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.setDrawerListener(toggle);
         toggle.syncState();
-        mNavigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);
 
-        mNavHeader = mNavigationView.getHeaderView(0);
+        navHeader = navigationView.getHeaderView(0);
 
 
-        mPhoto = (ImageView)mNavHeader.findViewById(R.id.logo);
-        mName = (TextView)mNavHeader.findViewById(R.id.nombre_usuario);
-        mCorreo = (TextView) mNavHeader.findViewById(R.id.correo_electronico) ;
+        userPicture = (ImageView) navHeader.findViewById(R.id.logo);
+        userName = (TextView) navHeader.findViewById(R.id.nombre_usuario);
+        userMail = (TextView) navHeader.findViewById(R.id.correo_electronico) ;
 
         loadNavHeader();
 
@@ -53,8 +56,8 @@ public abstract class ActivityBase extends AppCompatActivity implements Navigati
         Bitmap photo = BitmapFactory.decodeResource(this.getResources(),
                 R.drawable.logo);
 
-        mName.setText("Nombre de usuario");
-        mCorreo.setText("uncorreo@hotmail.com");
+        userName.setText("Nombre de usuario");
+        userMail.setText("uncorreo@hotmail.com");
     }
     @Override
     public void setTitle(CharSequence title) {
@@ -71,6 +74,15 @@ public abstract class ActivityBase extends AppCompatActivity implements Navigati
         }
     }
 
+    public void logout() {
+        LoginManager.getInstance().logOut();
+        goLoginScreen();
+    }
+    private void goLoginScreen() {
+        Intent intent = new Intent(this, ActivityLogin.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -81,6 +93,9 @@ public abstract class ActivityBase extends AppCompatActivity implements Navigati
             case R.id.sidebar_tienda:
                 intent = new Intent(this, ActivityTienda.class);
                 startActivity(intent);
+                break;
+            case R.id.sidebar_cerrarSesion:
+                logout();
                 break;
 
         }
