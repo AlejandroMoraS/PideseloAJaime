@@ -22,7 +22,7 @@
     <string name="nombre_usuario_txt">Nombre de usuario</string>
     <string name="correo_usuario_txt">Correo de Usuario</string>
 
-    <string name="fragment_tab1">Comida</string>
+    <string name="fragment_tab1">Comidas</string>
     <string name="fragment_tab2">Bebidas</string>
     <string name="fragment_tab3">Paquetes</string>
 

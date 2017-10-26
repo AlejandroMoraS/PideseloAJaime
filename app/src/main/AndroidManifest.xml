@@ -18,17 +18,19 @@
             android:value="@string/facebook_app_id" />
 
         <activity android:name=".ActivityMain" />
-        <activity android:name=".gui.ActivityTienda"></activity>
-        <activity
-            android:name=".gui.ActivityNavigationDrawer"
-            android:label="@string/title_activity_navigation_drawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ActivityLogin">
+        <activity android:name=".gui.ActivityTienda">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".gui.ActivityNavigationDrawer"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ActivityLogin">
+
         </activity>
         <activity android:name=".gui.ActivityProfile"></activity>
     </application>

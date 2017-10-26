@@ -17,9 +17,9 @@
         android:id="@+id/logo"
         android:layout_width="96dp"
         android:layout_height="58dp"
+        android:layout_weight="1.22"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/logo"
-        android:layout_weight="0.22" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/nombre_usuario"
