@@ -18,7 +18,7 @@ card_view:cardCornerRadius="@dimen/categories_corner_radius">
         android:layout_width="match_parent"
         android:layout_height="@dimen/categories_image_height"
         android:scaleType="fitXY"
-        android:src="@drawable/vodka" />
+        android:src="@drawable/icon_vodka" />
 
     <TextView
         android:id="@+id/fragment_textCategory"

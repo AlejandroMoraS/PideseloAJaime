@@ -1,6 +1,7 @@
 package mx.iteso.jaimeapp.pideseloajaime.AdapterClass;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +14,6 @@ import java.util.ArrayList;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Categories;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-/**
- * Created by Alex Mora on 26/10/2017.
- */
 
 public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.ViewHolder> implements View.OnClickListener{
     private ArrayList<Categories> dataSet;
@@ -34,8 +32,20 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.categoryImage.setImageResource(R.drawable.vodka);
-        holder.categoryName.setText(dataSet.get(position).getCategoryName());
+
+        Categories mcategories = dataSet.get(position);
+
+        String categoryName = mcategories.getCategoryName();
+        Drawable categoryImage = mcategories.getCategoryImage();
+
+        TextView name = holder.categoryName;
+        name.setText(categoryName);
+
+        ImageView picture = holder.categoryImage;
+        picture.setImageDrawable(categoryImage);
+
+
+
 
     }
 
