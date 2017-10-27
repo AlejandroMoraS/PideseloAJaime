@@ -1,13 +1,16 @@
 package mx.iteso.jaimeapp.pideseloajaime.gui;
 
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -15,27 +18,27 @@ import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterCategories;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Categories;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentBebidas extends Fragment {
+public class Fragment_beer extends Fragment {
 
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<Categories> myDataSet;
-    private static int columns = 2;
+    private static int columns = 3;
 
 
-    public FragmentBebidas() {
+    public Fragment_beer() {
+        // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_bebidas, container, false);
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.fragment_bebidasRecycler);
+        View view = inflater.inflate(R.layout.fragment_beer, container, false);
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.fragment_beerRecycler);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), columns));
@@ -60,7 +63,13 @@ public class FragmentBebidas extends Fragment {
         mAdapter = new AdapterCategories(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);
 
-    return view;
+
+
+        return view;
     }
+
+
+
+
 
 }

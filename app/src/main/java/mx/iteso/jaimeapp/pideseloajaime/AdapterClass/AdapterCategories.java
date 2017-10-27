@@ -44,9 +44,6 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
         ImageView picture = holder.categoryImage;
         picture.setImageDrawable(categoryImage);
 
-
-
-
     }
 
     @Override
@@ -60,8 +57,8 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        public ImageView categoryImage;
-        public TextView categoryName;
+        private ImageView categoryImage;
+        private TextView categoryName;
 
         public ViewHolder(View itemView) {
             super(itemView);
