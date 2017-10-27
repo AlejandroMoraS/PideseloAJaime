@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">PideseloAJaime</string>
+    <string name="app_name">Pídeselo a Jaime</string>
     <string name="title_activity__side_bar">Activity_SideBar</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="logo_name">Pídeselo a Jaime</string>
 
     <string-array name="titles">
         <item>Tienda</item>

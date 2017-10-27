@@ -28,11 +28,9 @@
         <activity
             android:name=".gui.ActivityNavigationDrawer"
             android:label="@string/title_activity_navigation_drawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ActivityLogin">
-
-        </activity>
-        <activity android:name=".gui.ActivityProfile"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActivityLogin"></activity>
+        <activity android:name=".gui.ActivityProfile" />
     </application>
 
 </manifest>

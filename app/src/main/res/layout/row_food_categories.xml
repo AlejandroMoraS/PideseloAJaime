@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/categories_margin"
+    android:padding="10dp"
+    card_view:cardCornerRadius="@dimen/categories_corner_radius">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/row_fragment_food_picture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/vodka" />
+
+        <TextView
+            android:id="@+id/row_fragment_food_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_fragment_food_picture"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/categories_title_size" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
