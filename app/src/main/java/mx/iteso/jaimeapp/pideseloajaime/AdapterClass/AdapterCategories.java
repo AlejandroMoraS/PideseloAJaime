@@ -1,6 +1,7 @@
 package mx.iteso.jaimeapp.pideseloajaime.AdapterClass;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,11 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Categories;
 import mx.iteso.jaimeapp.pideseloajaime.R;
+import mx.iteso.jaimeapp.pideseloajaime.gui.ActivityProduct;
 
 
 public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.ViewHolder> implements View.OnClickListener{
@@ -31,7 +34,7 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
 
         Categories mcategories = dataSet.get(position);
 
@@ -44,17 +47,42 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
         ImageView picture = holder.categoryImage;
         picture.setImageDrawable(categoryImage);
 
+
+        ((ViewHolder)holder).categoryImage.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v){
+                Intent intent;
+                switch (position){
+                    case 0:
+                        intent = new Intent(v.getContext(), ActivityProduct.class);
+                        context.startActivity(intent);
+                        break;
+                    case 1: Toast.makeText(context, "Diste click a la posision " +
+                            position, Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2: Toast.makeText(context, "Diste click a la posision " +
+                            position, Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
+            }
+        });
+
+
     }
+
 
     @Override
     public int getItemCount() {
         return dataSet.size();
     }
 
-    public void onClick(View view){
-       // Intent intent = new Intent(context, Activity.class);
-       // context.startActivity(intent);
+    @Override
+    public void onClick(View v) {
+
     }
+
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         private ImageView categoryImage;
@@ -68,4 +96,6 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
 
         }
     }
+
+
 }

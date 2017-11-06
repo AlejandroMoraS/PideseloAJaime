@@ -1,21 +1,17 @@
 package mx.iteso.jaimeapp.pideseloajaime.gui;
 
-
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterCategories;
-import mx.iteso.jaimeapp.pideseloajaime.Beans.Categories;
+import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterProduct;
+import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
 /**
@@ -25,8 +21,8 @@ public class Fragment_beer extends Fragment {
 
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<Categories> myDataSet;
-    private static int columns = 3;
+    private ArrayList<Product> myDataSet;
+    private static int columns = 2;
 
 
     public Fragment_beer() {
@@ -42,28 +38,16 @@ public class Fragment_beer extends Fragment {
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), columns));
-        ArrayList<Categories> myDataSet = new ArrayList<Categories>();
+        ArrayList<Product> myDataSet = new ArrayList<Product>();
 
 
-        Categories category1 = new Categories(getResources().getDrawable(R.drawable.icon_beer), "Cervezas");
-        Categories category2 = new Categories(getResources().getDrawable(R.drawable.icon_soda), "Refrescos");
-        Categories category3 = new Categories(getResources().getDrawable(R.drawable.icon_juice), "Jugos");
-        Categories category4 = new Categories(getResources().getDrawable(R.drawable.icon_tequila), "Tequila");
-        Categories category5 = new Categories(getResources().getDrawable(R.drawable.icon_vodka), "Vodka");
-        Categories category6 = new Categories(getResources().getDrawable(R.drawable.icon_whisky), "Whisky");
-        Categories category7 = new Categories(getResources().getDrawable(R.drawable.icon_wine), "Vino");
-        myDataSet.add(category1);
-        myDataSet.add(category2);
-        myDataSet.add(category3);
-        myDataSet.add(category4);
-        myDataSet.add(category5);
-        myDataSet.add(category6);
-        myDataSet.add(category7);
+        Product product1 = new Product(getResources().getDrawable(R.drawable.icon_beer), "cerveza", "1000", "add to cart");
+        Product product2 = new Product(getResources().getDrawable(R.drawable.icon_beer), "cerveza", "1000", "add to cart");
+        myDataSet.add(product1);
+        myDataSet.add(product2);
 
-        mAdapter = new AdapterCategories(getActivity(), myDataSet);
+        mAdapter = new AdapterProduct(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);
-
-
 
         return view;
     }

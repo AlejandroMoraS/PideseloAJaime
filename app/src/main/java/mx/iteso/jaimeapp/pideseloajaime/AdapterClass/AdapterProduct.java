@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHolder> implements View.OnClickListener{
+public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHolder> {
     private ArrayList<Product> dataSet;
     private Context context;
 
@@ -27,7 +27,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
     @Override
     public AdapterProduct.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product, parent, false);
-        AdapterProduct.ViewHolder mviewHolder = new AdapterProduct.ViewHolder(view);
+        ViewHolder mviewHolder = new ViewHolder(view);
         return mviewHolder;
 
     }
@@ -56,26 +56,21 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
 
     }
 
+
     @Override
     public int getItemCount() {
         return dataSet.size();
     }
 
-    public void onClick(View view){
-        // Intent intent = new Intent(context, Activity.class);
-        // context.startActivity(intent);
-    }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView productName;
         public TextView producPrice;
         public TextView productCart;
         public ImageView productImage;
 
-
         public ViewHolder(View itemView) {
             super(itemView);
-
             productName = (TextView) itemView.findViewById(R.id.fragment_textName);
             producPrice = (TextView) itemView.findViewById(R.id.fragment_textPrice);
             productCart = (TextView) itemView.findViewById(R.id.fragment_textCart);
@@ -83,6 +78,9 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
 
 
         }
+
+
+
     }
 
 
