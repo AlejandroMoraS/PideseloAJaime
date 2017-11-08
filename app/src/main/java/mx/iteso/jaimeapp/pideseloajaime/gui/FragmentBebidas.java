@@ -41,20 +41,6 @@ public class FragmentBebidas extends Fragment {
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), columns));
         ArrayList<Categories> myDataSet = new ArrayList<Categories>();
 
- /*       ImageButton BebidasBoton1 = (ImageButton) view.findViewById(R.drawable.icon_beer);
-        BebidasBoton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment_beer fragmentBeer = new Fragment_beer();
-                FragmentManager manager = getFragmentManager();
-                manager.beginTransaction()
-                        .replace(R.id.viewpager, fragmentBeer, fragmentBeer.getTag())
-                        .commit();
-
-            }
-        });
-*/
-
 
         Categories category1 = new Categories(getResources().getDrawable(R.drawable.icon_beer), "Cervezas");
         Categories category2 = new Categories(getResources().getDrawable(R.drawable.icon_soda), "Refrescos");

@@ -41,18 +41,14 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
         String productCart = mproduct.getProductCart();
         Drawable productImage = mproduct.getProductImage();
 
-        TextView name = holder.productName;
-        name.setText(productName);
+        holder.productName.setText(productName);
 
-        TextView price = holder.producPrice;
-        name.setText(productPrice);
+        holder.producPrice.setText(productPrice);
 
-        TextView cart = holder.productCart;
-        name.setText(productCart);
+        holder.productCart.setText(productCart);
 
 
-        ImageView picture = holder.productImage;
-        picture.setImageDrawable(productImage);
+        holder.productImage.setImageDrawable(productImage);
 
     }
 
@@ -79,10 +75,6 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
 
         }
 
-
-
     }
-
-
 
 }
