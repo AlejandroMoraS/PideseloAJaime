@@ -35,4 +35,7 @@
     <string name="error_login">Error</string>
 
     <string name="title_activity_navigation_drawer">ActivityNavigationDrawer</string>
+
+    <string name="agregarCarrito_txt">Agregar al carrito</string>
+    <string name="agregadoCarrito_txt">Agregado</string>
 </resources>

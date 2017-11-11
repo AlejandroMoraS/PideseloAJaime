@@ -38,14 +38,11 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
 
         String productName = mproduct.getProductName();
         String productPrice = mproduct.getProductPrice();
-        String productCart = mproduct.getProductCart();
         Drawable productImage = mproduct.getProductImage();
 
         holder.productName.setText(productName);
 
         holder.producPrice.setText(productPrice);
-
-        holder.productCart.setText(productCart);
 
 
         holder.productImage.setImageDrawable(productImage);
@@ -69,7 +66,6 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
             super(itemView);
             productName = (TextView) itemView.findViewById(R.id.fragment_textName);
             producPrice = (TextView) itemView.findViewById(R.id.fragment_textPrice);
-            productCart = (TextView) itemView.findViewById(R.id.fragment_textCart);
             productImage = (ImageView) itemView.findViewById(R.id.fragment_imageProduct);
 
 

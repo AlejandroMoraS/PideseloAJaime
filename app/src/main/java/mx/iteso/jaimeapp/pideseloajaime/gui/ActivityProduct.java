@@ -31,10 +31,23 @@ public class ActivityProduct extends AppCompatActivity {
         ArrayList<Product> myDataSet = new ArrayList<Product>();
 
 
-        Product product1 = new Product(getResources().getDrawable(R.drawable.imagen_corona_clara), "Corona 355ml", "$11.50", "add to cart");
-        Product product2 = new Product(getResources().getDrawable(R.drawable.icon_beer), "cerveza", "1000", "add to cart");
+        Product product1 = new Product(getResources().getDrawable(R.drawable.imagen_corona_clara), "Corona 355ml", "$11.50");
+        Product product2 = new Product(getResources().getDrawable(R.drawable.imagen_mammoth), "Mammoth 355ml", "$15.50");
+        Product product3 = new Product(getResources().getDrawable(R.drawable.imagen_minerva), "Mammoth 355ml", "$15.50");
+        Product product4 = new Product(getResources().getDrawable(R.drawable.imagen_heineken), "Mammoth 355ml", "$15.50");
+        Product product5 = new Product(getResources().getDrawable(R.drawable.imagen_sol), "Mammoth 355ml", "$15.50");
+        Product product6 = new Product(getResources().getDrawable(R.drawable.imagen_indio), "Mammoth 355ml", "$15.50");
+        Product product7 = new Product(getResources().getDrawable(R.drawable.imagen_budweiser), "Mammoth 355ml", "$15.50");
+        Product product8 = new Product(getResources().getDrawable(R.drawable.imagen_stella), "Mammoth 355ml", "$15.50");
         myDataSet.add(product1);
         myDataSet.add(product2);
+        myDataSet.add(product3);
+        myDataSet.add(product4);
+        myDataSet.add(product5);
+        myDataSet.add(product6);
+        myDataSet.add(product7);
+        myDataSet.add(product8);
+
 
         mAdapter = new AdapterProduct(this, myDataSet);
         recyclerView.setAdapter(mAdapter);

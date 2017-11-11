@@ -8,7 +8,7 @@
 
     <dimen name="categories_margin">4dp</dimen>
     <dimen name="categories_corner_radius">4dp</dimen>
-    <dimen name="categories_image_height">150dp</dimen>
+    <dimen name="categories_image_height">180dp</dimen>
     <dimen name="categories_title_size">17sp</dimen>
 
 </resources>

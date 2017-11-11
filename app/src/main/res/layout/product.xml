@@ -40,14 +40,17 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/categories_title_size" />
 
-        <TextView
-            android:id="@+id/fragment_textCart"
+
+        <Button
+            android:id="@+id/boton_agregarCarrito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/categories_title_size" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonstyleithgradient"
+            android:text="@string/agregarCarrito_txt"
+            android:textColor="#fff"
+            android:layout_marginBottom="10dp"/>
 
 
     </LinearLayout>

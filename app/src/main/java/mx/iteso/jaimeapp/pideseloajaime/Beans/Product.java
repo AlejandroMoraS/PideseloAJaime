@@ -7,13 +7,11 @@ public class Product {
     protected Drawable productImage;
     protected String productName;
     protected String productPrice;
-    protected String productCart;
 
-    public Product(Drawable productImage, String productName, String productPrice, String productCart) {
+    public Product(Drawable productImage, String productName, String productPrice) {
         this.productImage = productImage;
         this.productName = productName;
         this.productPrice = productPrice;
-        this.productCart = productCart;
     }
 
     public Drawable getProductImage() {
@@ -40,11 +38,5 @@ public class Product {
         this.productPrice = productPrice;
     }
 
-    public String getProductCart() {
-        return productCart;
-    }
 
-    public void setProductCart(String productCart) {
-        this.productCart = productCart;
-    }
 }
