@@ -31,7 +31,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ActivityLogin" />
         <activity android:name=".gui.ActivityProfile" />
-        <activity android:name=".gui.ActivityProduct"></activity>
+        <activity android:name=".gui.ActivityProduct" />
+        <activity android:name=".gui.ActivityProductComidas"></activity>
     </application>
 
 </manifest>

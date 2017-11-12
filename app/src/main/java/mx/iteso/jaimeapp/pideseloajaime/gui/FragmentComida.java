@@ -44,15 +44,14 @@ public class FragmentComida extends Fragment {
         mRecyclerFood.setLayoutManager(layoutManager);
         mRecyclerFood.setAdapter(mFoodAdapter);
 
-
-        FoodCategories category1 = new FoodCategories("Hamburguesas", getResources().getDrawable(R.drawable.icon_burguer));
-        FoodCategories category2 = new FoodCategories("Hot Dog", getResources().getDrawable(R.drawable.icon_hot_dog));
-        FoodCategories category3 = new FoodCategories("Carne", getResources().getDrawable(R.drawable.icon_steak));
-        FoodCategories category4 = new FoodCategories("Sandwich", getResources().getDrawable(R.drawable.icon_sandwich));
-        FoodCategories category5 = new FoodCategories("Frutas y Verduras", getResources().getDrawable(R.drawable.icon_frutas_vegetales));
-        FoodCategories category6 = new FoodCategories("Complementos", getResources().getDrawable(R.drawable.icon_ketchup));
-        FoodCategories category7 = new FoodCategories("Sushi", getResources().getDrawable(R.drawable.icon_sushi));
-        FoodCategories category8 = new FoodCategories("Papas Fritas", getResources().getDrawable(R.drawable.icon_chips));
+        FoodCategories category1 = new FoodCategories("Papas Fritas", getResources().getDrawable(R.drawable.icon_chips));
+        FoodCategories category2 = new FoodCategories("Hamburguesas", getResources().getDrawable(R.drawable.icon_burguer));
+        FoodCategories category3 = new FoodCategories("Hot Dog", getResources().getDrawable(R.drawable.icon_hot_dog));
+        FoodCategories category4 = new FoodCategories("Carne", getResources().getDrawable(R.drawable.icon_steak));
+        FoodCategories category5 = new FoodCategories("Sandwich", getResources().getDrawable(R.drawable.icon_sandwich));
+        FoodCategories category6 = new FoodCategories("Frutas y Verduras", getResources().getDrawable(R.drawable.icon_frutas_vegetales));
+        FoodCategories category7 = new FoodCategories("Complementos", getResources().getDrawable(R.drawable.icon_ketchup));
+        FoodCategories category8 = new FoodCategories("Sushi", getResources().getDrawable(R.drawable.icon_sushi));
         FoodCategories category9 = new FoodCategories("Pasta", getResources().getDrawable(R.drawable.icon_pasta));
         FoodCategories category10 = new FoodCategories("Pizza", getResources().getDrawable(R.drawable.icon_pizza));
         FoodCategories category11 = new FoodCategories("Comida China", getResources().getDrawable(R.drawable.icon_chinese_food));
