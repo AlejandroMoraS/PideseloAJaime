@@ -19,6 +19,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
     private ArrayList<Product> dataSet;
     private Context context;
 
+
     public AdapterProduct(Context context, ArrayList<Product> dataSet){
         this.dataSet = dataSet;
         this.context = context;

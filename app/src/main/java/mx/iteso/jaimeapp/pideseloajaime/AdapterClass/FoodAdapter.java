@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import mx.iteso.jaimeapp.pideseloajaime.Beans.FoodCategories;
 import mx.iteso.jaimeapp.pideseloajaime.R;
+import mx.iteso.jaimeapp.pideseloajaime.gui.ActivityProductComidas;
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewholder> {
 
@@ -54,8 +55,8 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewholder
                 Intent intent;
                 switch (position){
                     case 0:
-                        Toast.makeText(context, "Diste click a la posision " +
-                                position, Toast.LENGTH_SHORT).show();
+                        intent = new Intent(v.getContext(), ActivityProductComidas.class);
+                        context.startActivity(intent);
                         break;
                     case 1: Toast.makeText(context, "Diste click a la posision " +
                             position, Toast.LENGTH_SHORT).show();
