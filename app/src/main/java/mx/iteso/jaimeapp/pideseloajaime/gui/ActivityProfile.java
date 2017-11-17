@@ -96,6 +96,7 @@ public class ActivityProfile extends AppCompatActivity {
             GraphRequest.executeBatchAsync(request);
         }
     }
+    
 
     private void updateUI() {
         if(user != null) {
