@@ -22,26 +22,28 @@ import mx.iteso.jaimeapp.pideseloajaime.R;
 
 public class ActivityProfile extends AppCompatActivity {
 
-    ProfilePictureView picture;
+    private static final String NAME = "name";
+    private static final String ID = "id";
+    private static final String PICTURE = "picture";
+    private static final String FIELDS = "fields";
+    private static final String REQUEST_FIELDS = TextUtils.join(",", new String[]{ID, NAME, PICTURE});
+
+    ProfilePictureView profilePicture;
     TextView name;
     CallbackManager callbackManager;
     AccessTokenTracker accessTokenTracker;
     JSONObject user;
 
-    String FIELDS = "fields";
-    private String REQUEST_FIELDS = TextUtils.join(",", new String[] {
-            "name", "id", "profile"
-    });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(this);
+
         callbackManager = CallbackManager.Factory.create();
         setContentView(R.layout.activity_profile);
-
         name = (TextView) findViewById(R.id.activity_profile_name);
-        picture = (ProfilePictureView) findViewById(R.id.activity_profile_picture);
+        profilePicture = (ProfilePictureView) findViewById(R.id.activity_profile_picture);
 
         accessTokenTracker = new AccessTokenTracker() {
             @Override
@@ -94,18 +96,24 @@ public class ActivityProfile extends AppCompatActivity {
             parameters.putString(FIELDS, REQUEST_FIELDS);
             request.setParameters(parameters);
             GraphRequest.executeBatchAsync(request);
+        } else {
+            user = null;
         }
     }
-    
 
+    @SuppressWarnings("deprecation")
     private void updateUI() {
-        if(user != null) {
-            try {
-                picture.setProfileId(user.getString("id"));
-            } catch(Exception e) {
-
+        if (AccessToken.getCurrentAccessToken() != null) {
+            name.setTextColor(getColor(R.color.colorPrimary));
+           // name.setTextColor(getResources().getColor(R.color.colorPrimary));
+            //name.setShadowLayer(1f, 0f, -1f, getResources().getColor(R.color.colorPrimary));
+            if (user != null) {
+                try {
+                    profilePicture.setProfileId(user.getString("id"));
+                } catch (Exception e) {
+                }
+                name.setText(user.optString("name"));
             }
-            name.setText(user.optString("name"));
         }
     }
 
