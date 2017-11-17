@@ -17,12 +17,12 @@ import mx.iteso.jaimeapp.pideseloajaime.Beans.FoodCategories;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 import mx.iteso.jaimeapp.pideseloajaime.gui.ActivityProductComidas;
 
-public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewholder> {
+public class AdapterFood extends RecyclerView.Adapter<AdapterFood.FoodViewholder> {
 
     private Context context;
     private ArrayList<FoodCategories> mFoodList;
 
-    public FoodAdapter(Context context, ArrayList<FoodCategories> mFoodList) {
+    public AdapterFood(Context context, ArrayList<FoodCategories> mFoodList) {
         this.context = context;
         this.mFoodList = mFoodList;
     }
@@ -31,7 +31,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewholder
     public FoodViewholder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater li = LayoutInflater.from(parent.getContext());
         View v = li.inflate(R.layout.row_food_categories, parent, false);
-        return new FoodAdapter.FoodViewholder(v);
+        return new AdapterFood.FoodViewholder(v);
     }
 
     @Override

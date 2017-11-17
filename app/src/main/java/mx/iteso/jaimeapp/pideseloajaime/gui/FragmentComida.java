@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.FoodAdapter;
+import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterFood;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.FoodCategories;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
@@ -21,7 +21,7 @@ import mx.iteso.jaimeapp.pideseloajaime.R;
 public class FragmentComida extends Fragment {
 
     private RecyclerView mRecyclerFood;
-    private FoodAdapter mFoodAdapter;
+    private AdapterFood mAdapterFood;
     private ArrayList<FoodCategories> mFoodList = new ArrayList();
     private View mRootView;
 
@@ -37,12 +37,12 @@ public class FragmentComida extends Fragment {
         mRecyclerFood = mRootView.findViewById(R.id.fragment_food_recycler);
         RecyclerView.LayoutManager layoutManager = (new GridLayoutManager(getActivity(), 2));
 
-        mFoodAdapter = new FoodAdapter(getActivity(), mFoodList);
+        mAdapterFood = new AdapterFood(getActivity(), mFoodList);
         mRecyclerFood.setHasFixedSize(true);
         mRecyclerFood.setItemViewCacheSize(20);
         mRecyclerFood.setDrawingCacheEnabled(true);
         mRecyclerFood.setLayoutManager(layoutManager);
-        mRecyclerFood.setAdapter(mFoodAdapter);
+        mRecyclerFood.setAdapter(mAdapterFood);
 
         FoodCategories category1 = new FoodCategories("Papas Fritas", getResources().getDrawable(R.drawable.icon_chips));
         FoodCategories category2 = new FoodCategories("Hamburguesas", getResources().getDrawable(R.drawable.icon_burguer));
