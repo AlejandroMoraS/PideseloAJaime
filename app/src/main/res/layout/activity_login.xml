@@ -26,9 +26,9 @@
         app:civ_border_color="@color/deep_purple_600"
         app:civ_circle_background_color="@color/white"
         app:civ_border_width="2dp"
+        android:layout_marginBottom="18dp"
         android:layout_above="@+id/activity_login_logo_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/activity_login_logo_name"

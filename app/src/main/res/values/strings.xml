@@ -37,5 +37,8 @@
     <string name="title_activity_navigation_drawer">ActivityNavigationDrawer</string>
 
     <string name="agregarCarrito_txt">Agregar al carrito</string>
-    <string name="agregadoCarrito_txt">Agregado</string>
+    <string name="agregadoCarrito_txt">Agregado al Carrito</string>
+
+    <string name="undo_txt">Undo</string>
+
 </resources>

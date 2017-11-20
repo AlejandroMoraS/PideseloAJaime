@@ -23,20 +23,26 @@
         </activity>
 
         <activity android:name=".ActivityMain" />
-        <activity android:name=".gui.ActivityTienda"> </activity>
-        <activity
-            android:name=".gui.ActivityNavigationDrawer"
-            android:label="@string/title_activity_navigation_drawer"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ActivityLogin">
+        <activity android:name=".gui.ActivityTienda">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".gui.ActivityNavigationDrawer"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActivityLogin">
+
+
+
         </activity>
         <activity android:name=".gui.ActivityProfile" />
-        <activity android:name=".gui.ActivityProduct" />
+        <activity android:name=".gui.ActivityProductCerveza" />
         <activity android:name=".gui.ActivityProductComidas" />
         <activity android:name=".gui.ActivityProductPaquetes"></activity>
     </application>

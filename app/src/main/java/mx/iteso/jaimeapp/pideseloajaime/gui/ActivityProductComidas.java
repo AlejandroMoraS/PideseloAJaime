@@ -5,10 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 
-import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterProduct;
+import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterProduct1;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
@@ -28,6 +29,8 @@ public class ActivityProductComidas extends AppCompatActivity{
         toolbar = (Toolbar) findViewById(R.id.toolbarProduct);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.comidasRecycler);
 
@@ -56,12 +59,21 @@ public class ActivityProductComidas extends AppCompatActivity{
         myDataSet.add(product9);
 
 
-        mAdapter = new AdapterProduct(this, myDataSet);
+        mAdapter = new AdapterProduct1(this, myDataSet);
         recyclerView.setAdapter(mAdapter);
 
+    }
 
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
 
+        if (id == android.R.id.home){
+            this.finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 

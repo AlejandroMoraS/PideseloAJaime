@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterProduct;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-public class ActivityProduct extends AppCompatActivity implements View.OnClickListener{
+public class ActivityProductCerveza extends AppCompatActivity implements View.OnClickListener{
 
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -29,6 +30,7 @@ public class ActivityProduct extends AppCompatActivity implements View.OnClickLi
         toolbar = (Toolbar) findViewById(R.id.toolbarProduct);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.fragment_beerRecycler);
 
@@ -74,6 +76,17 @@ public class ActivityProduct extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         //toolbar.
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == android.R.id.home){
+            this.finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
 

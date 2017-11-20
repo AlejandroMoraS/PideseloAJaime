@@ -1,7 +1,6 @@
 package mx.iteso.jaimeapp.pideseloajaime.gui;
 
 import android.content.Intent;
-import android.hardware.camera2.params.Face;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -16,7 +15,6 @@ import com.facebook.GraphResponse;
 import com.facebook.login.widget.ProfilePictureView;
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
@@ -33,6 +31,8 @@ public class ActivityProfile extends AppCompatActivity {
     CallbackManager callbackManager;
     AccessTokenTracker accessTokenTracker;
     JSONObject user;
+
+
 
 
     @Override
@@ -59,6 +59,7 @@ public class ActivityProfile extends AppCompatActivity {
                 }
             }
         };
+
 
     }
 

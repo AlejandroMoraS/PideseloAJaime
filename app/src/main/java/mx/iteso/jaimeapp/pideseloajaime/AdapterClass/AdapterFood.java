@@ -58,10 +58,10 @@ public class AdapterFood extends RecyclerView.Adapter<AdapterFood.FoodViewholder
                         intent = new Intent(v.getContext(), ActivityProductComidas.class);
                         context.startActivity(intent);
                         break;
-                    case 1: Toast.makeText(context, "Diste click a la posision " +
+                    case 1: Toast.makeText(context, "Diste click a la posición " +
                             position, Toast.LENGTH_SHORT).show();
                         break;
-                    case 2: Toast.makeText(context, "Diste click a la posision " +
+                    case 2: Toast.makeText(context, "Diste click a la posición " +
                             position, Toast.LENGTH_SHORT).show();
                         break;
                 }

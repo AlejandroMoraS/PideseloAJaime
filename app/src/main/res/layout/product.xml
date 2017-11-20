@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:background="@drawable/buttonstyleithgradient"
+            android:background="@drawable/buttonstyle_blue"
             android:text="@string/agregarCarrito_txt"
             android:textColor="#fff"
             android:layout_marginBottom="10dp"/>
