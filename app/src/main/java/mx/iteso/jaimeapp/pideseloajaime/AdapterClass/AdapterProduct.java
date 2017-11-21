@@ -2,10 +2,8 @@ package mx.iteso.jaimeapp.pideseloajaime.AdapterClass;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,6 +54,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
 
         holder.productImage.setImageDrawable(productImage);
 
+        holder.productButton.setText("Agregar al carrito");
 
         ((ViewHolder)holder).productButton.setOnClickListener(new View.OnClickListener() {
 
@@ -63,34 +62,51 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
 
             @Override
             public void onClick(View v){
-                Intent intent;
                 switch (position){
                     case 0:
                         if (holder.productButton.getText() == "Agregar al carrito"){
                             Toast.makeText(getApplicationContext(),"Producto añadido al carrito", Toast.LENGTH_SHORT).show();
-                            holder.productButton.setText(R.string.agregadoCarrito_txt);
-                            holder.productButton.setBackgroundColor(ContextCompat.getColor(context, R.color.gray));
+                            holder.productButton.setText("Agregado al Carrito");
+                            holder.productButton.setBackgroundResource(R.drawable.buttonstyle_gray);
 
 
                         } else if (holder.productButton.getText() == "Agregado al Carrito"){
                             Snackbar snack = Snackbar.make(v, "Este producto ya esta en tu carrito",Snackbar.LENGTH_SHORT);
                             snack.setAction(R.string.undo_txt, new MyUndoListener());
                             snack.show();
-                            holder.productButton.setText(R.string.agregadoCarrito_txt);
-
                         }
-                        Toast.makeText(context, holder.productButton.getText()
-                                , Toast.LENGTH_SHORT).show();
-
                         break;
 
-                    case 1: Toast.makeText(context, "Diste click a la posición " +
-                            position, Toast.LENGTH_SHORT).show();
+                    case 1:
+                        if (holder.productButton.getText() == "Agregar al carrito"){
+                            Toast.makeText(getApplicationContext(),"Producto añadido al carrito", Toast.LENGTH_SHORT).show();
+                            holder.productButton.setText("Agregado al Carrito");
+                            holder.productButton.setBackgroundResource(R.drawable.buttonstyle_gray);
+
+
+                        } else if (holder.productButton.getText() == "Agregado al Carrito"){
+                            Snackbar snack = Snackbar.make(v, "Este producto ya esta en tu carrito",Snackbar.LENGTH_SHORT);
+                            snack.setAction(R.string.undo_txt, new MyUndoListener());
+                            snack.show();
+                        }
                         break;
 
-                    case 2: Toast.makeText(context, "Diste click a la posición " +
-                            position, Toast.LENGTH_SHORT).show();
+
+
+                    case 2:
+                        if (holder.productButton.getText() == "Agregar al carrito"){
+                            Toast.makeText(getApplicationContext(),"Producto añadido al carrito", Toast.LENGTH_SHORT).show();
+                            holder.productButton.setText("Agregado al Carrito");
+                            holder.productButton.setBackgroundResource(R.drawable.buttonstyle_gray);
+
+
+                        } else if (holder.productButton.getText() == "Agregado al Carrito"){
+                            Snackbar snack = Snackbar.make(v, "Este producto ya esta en tu carrito",Snackbar.LENGTH_SHORT);
+                            snack.setAction(R.string.undo_txt, new MyUndoListener());
+                            snack.show();
+                        }
                         break;
+
                 }
 
             }
@@ -102,8 +118,17 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
                     switch (position){
                         case 0:
                             holder.productButton.setText(R.string.agregarCarrito_txt);
+                            holder.productButton.setBackgroundResource(R.drawable.buttonstyle_blue);
                             break;
+
                         case 1:
+                            holder.productButton.setText(R.string.agregarCarrito_txt);
+                            holder.productButton.setBackgroundResource(R.drawable.buttonstyle_blue);
+                            break;
+
+                        case 2:
+                            holder.productButton.setText(R.string.agregarCarrito_txt);
+                            holder.productButton.setBackgroundResource(R.drawable.buttonstyle_blue);
                             break;
 
                     }
