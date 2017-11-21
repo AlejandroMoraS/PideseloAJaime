@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import mx.iteso.jaimeapp.pideseloajaime.Beans.Carrito;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
@@ -41,12 +43,12 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
     @Override
     public void onBindViewHolder(final AdapterProduct.ViewHolder holder, final int position) {
 
-        Product mproduct = dataSet.get(position);
+        final Product mproduct = dataSet.get(position);
 
-        final String productName = mproduct.getProductName();
-        final String productPrice = mproduct.getProductPrice();
-        final Drawable productImage = mproduct.getProductImage();
-        final Button productButton = mproduct.getProductButton();
+        String productName = mproduct.getProductName();
+        String productPrice = mproduct.getProductPrice();
+        Drawable productImage = mproduct.getProductImage();
+        Button productButton = mproduct.getProductButton();
 
         holder.productName.setText(productName);
 
@@ -62,10 +64,12 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
 
             @Override
             public void onClick(View v){
+                Carrito.getInstance().addProduct(mproduct, 1);
+                Log.d("pppp", "onBindViewHolder: " + Carrito.getInstance().getCost());
                 switch (position){
                     case 0:
                         if (holder.productButton.getText() == "Agregar al carrito"){
-                            Toast.makeText(getApplicationContext(),"Producto añadido al carrito", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Producto añadido al carrito" + Carrito.getInstance().getCost(), Toast.LENGTH_SHORT).show();
                             holder.productButton.setText("Agregado al Carrito");
                             holder.productButton.setBackgroundResource(R.drawable.buttonstyle_gray);
 

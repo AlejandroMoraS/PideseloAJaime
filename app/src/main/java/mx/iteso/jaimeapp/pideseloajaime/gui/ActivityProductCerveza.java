@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
 
 import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterProduct;
+import mx.iteso.jaimeapp.pideseloajaime.Beans.Carrito;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
@@ -21,7 +23,6 @@ public class ActivityProductCerveza extends AppCompatActivity implements View.On
     private ArrayList<Product> myDataSet;
     private static int columns = 2;
     Toolbar toolbar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,6 @@ public class ActivityProductCerveza extends AppCompatActivity implements View.On
         Product product10 = new Product(getResources().getDrawable(R.drawable.imagen_budlight), "Bud Light 355ml", "$10.50");
         Product product11 = new Product(getResources().getDrawable(R.drawable.imagen_modelo), "Modelo Oscura 355ml", "$13.00");
 
-
         myDataSet.add(product1);
         myDataSet.add(product2);
         myDataSet.add(product3);
@@ -64,18 +64,16 @@ public class ActivityProductCerveza extends AppCompatActivity implements View.On
         myDataSet.add(product10);
         myDataSet.add(product11);
 
-
-
         mAdapter = new AdapterProduct(this, myDataSet);
         recyclerView.setAdapter(mAdapter);
 
-
     }
-
 
     @Override
     public void onClick(View v) {
         //toolbar.
+        //Carrito.getInstance().addProduct(producto, 1);
+        Log.d("tag", "onClick: product?");
     }
 
     @Override
@@ -85,7 +83,7 @@ public class ActivityProductCerveza extends AppCompatActivity implements View.On
         if (id == android.R.id.home){
             this.finish();
         }
-
+        Log.d("tag", "onClick: product?");
         return super.onOptionsItemSelected(item);
     }
 }
