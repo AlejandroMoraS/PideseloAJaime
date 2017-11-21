@@ -41,26 +41,18 @@ public class FragmentBebidas extends Fragment {
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), columns));
         ArrayList<Categories> myDataSet = new ArrayList<Categories>();
 
-
-        Categories category1 = new Categories(getResources().getDrawable(R.drawable.icon_beer), "Cervezas");
-        Categories category2 = new Categories(getResources().getDrawable(R.drawable.icon_soda), "Refrescos");
-        Categories category3 = new Categories(getResources().getDrawable(R.drawable.icon_juice), "Jugos");
-        Categories category4 = new Categories(getResources().getDrawable(R.drawable.icon_tequila), "Tequila");
-        Categories category5 = new Categories(getResources().getDrawable(R.drawable.icon_vodka), "Vodka");
-        Categories category6 = new Categories(getResources().getDrawable(R.drawable.icon_whisky), "Whisky");
-        Categories category7 = new Categories(getResources().getDrawable(R.drawable.icon_wine), "Vino");
-        myDataSet.add(category1);
-        myDataSet.add(category2);
-        myDataSet.add(category3);
-        myDataSet.add(category4);
-        myDataSet.add(category5);
-        myDataSet.add(category6);
-        myDataSet.add(category7);
+        myDataSet.add(new Categories("Cervezas", getResources().getDrawable(R.drawable.icon_beer)));
+        myDataSet.add(new Categories("Refrescos", getResources().getDrawable(R.drawable.icon_soda)));
+        myDataSet.add(new Categories("Jugos", getResources().getDrawable(R.drawable.icon_juice)));
+        myDataSet.add(new Categories("Tequila", getResources().getDrawable(R.drawable.icon_tequila)));
+        myDataSet.add(new Categories("Vodka", getResources().getDrawable(R.drawable.icon_vodka)));
+        myDataSet.add(new Categories("Whisky", getResources().getDrawable(R.drawable.icon_whisky)));
+        myDataSet.add(new Categories("Vino", getResources().getDrawable(R.drawable.icon_wine)));
 
         mAdapter = new AdapterCategories(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);
 
-    return view;
+        return view;
     }
 
 }

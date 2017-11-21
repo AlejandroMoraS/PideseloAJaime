@@ -14,11 +14,11 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import mx.iteso.jaimeapp.pideseloajaime.Beans.FoodCategories;
+import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 import mx.iteso.jaimeapp.pideseloajaime.gui.ActivityProductComidas;
 
 public class AdapterFood extends RecyclerView.Adapter<AdapterFood.FoodViewholder> {
-
     private Context context;
     private ArrayList<FoodCategories> mFoodList;
 
@@ -35,17 +35,20 @@ public class AdapterFood extends RecyclerView.Adapter<AdapterFood.FoodViewholder
     }
 
     @Override
-    public void onBindViewHolder(FoodViewholder holder,final int position) {
+    public void onBindViewHolder(FoodViewholder holder, final int position) {
 
         FoodCategories mFoodCategories = mFoodList.get(position);
-
         String foodName = mFoodCategories.getFoodName();
+        //double foodPrice = mFoodCategories.getFoodPrice();
         Drawable foodPicture = mFoodCategories.getFoodPicture();
+
 
         TextView name = holder.mFoodName;
         name.setText(foodName);
 
         ImageView picture = holder.mFoodPicture;
+
+
         picture.setImageDrawable(foodPicture);
 
         ((FoodViewholder)holder).mFoodPicture.setOnClickListener(new View.OnClickListener() {

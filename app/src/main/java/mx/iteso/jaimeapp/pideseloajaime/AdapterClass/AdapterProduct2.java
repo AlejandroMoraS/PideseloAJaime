@@ -37,13 +37,12 @@ public class AdapterProduct2 extends RecyclerView.Adapter<AdapterProduct2.ViewHo
         Product mproduct = dataSet.get(position);
 
         String productName = mproduct.getProductName();
-        String productPrice = mproduct.getProductPrice();
+        double productPrice = mproduct.getProductPrice();
         Drawable productImage = mproduct.getProductImage();
 
         holder.productName.setText(productName);
 
-        holder.producPrice.setText(productPrice);
-
+        holder.producPrice.setText("$ " + productPrice);
 
         holder.productImage.setImageDrawable(productImage);
 
