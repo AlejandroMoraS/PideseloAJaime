@@ -2,8 +2,6 @@ package mx.iteso.jaimeapp.pideseloajaime.Beans;
 
 import android.graphics.drawable.Drawable;
 
-
-
 public class PaquetesCategories {
     protected Drawable PaquetesImage;
     protected String PaquetesName;

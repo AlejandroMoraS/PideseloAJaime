@@ -1,20 +1,15 @@
 package mx.iteso.jaimeapp.pideseloajaime.Beans;
 
-import android.content.Intent;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class Carrito {
     int image;
     double cost;
     int quantity;
     private static Carrito carrito;
-    HashMap<Integer, Product> products;
+    HashMap<Product, Integer> products;
 
     public Carrito() {
-
         products = new HashMap<>();
     }
 
@@ -26,19 +21,27 @@ public class Carrito {
 
     }
 
+    public void addProduct(Product product, int quantity) {
+        if(products.get(product) != null) {
+            products.put(product, products.get(product) + quantity);
+        } else {
+            products.put(product, quantity);
+        }
+    }
+
     public int getImage() {
         return image;
     }
 
-    public void addProduct(Product product, int quantity) {
-        products.put(quantity, product);
-        this.cost += 6;
-    }
     public void setImage(int image) {
         this.image = image;
     }
 
     public double getCost() {
+        double cost = 0;
+        for (Product p: products.keySet()) {
+            cost += p.getProductPrice() * products.get(p);
+        }
         return cost;
     }
 

@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-
 public class AdapterProduct1 extends RecyclerView.Adapter<AdapterProduct1.ViewHolder> {
     private ArrayList<Product> dataSet;
     private Context context;
@@ -38,12 +37,12 @@ public class AdapterProduct1 extends RecyclerView.Adapter<AdapterProduct1.ViewHo
         Product mproduct = dataSet.get(position);
 
         String productName = mproduct.getProductName();
-        String productPrice = mproduct.getProductPrice();
+        double productPrice = mproduct.getProductPrice();
         Drawable productImage = mproduct.getProductImage();
 
         holder.productName.setText(productName);
 
-        holder.producPrice.setText(productPrice);
+        holder.productPrice.setText("$" + productPrice);
 
 
         holder.productImage.setImageDrawable(productImage);
@@ -58,13 +57,13 @@ public class AdapterProduct1 extends RecyclerView.Adapter<AdapterProduct1.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView productName;
-        public TextView producPrice;
+        public TextView productPrice;
         public ImageView productImage;
 
         public ViewHolder(View itemView) {
             super(itemView);
             productName = (TextView) itemView.findViewById(R.id.fragment_textName);
-            producPrice = (TextView) itemView.findViewById(R.id.fragment_textPrice);
+            productPrice = (TextView) itemView.findViewById(R.id.fragment_textPrice);
             productImage = (ImageView) itemView.findViewById(R.id.fragment_imageProduct);
 
 

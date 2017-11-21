@@ -1,6 +1,5 @@
 package mx.iteso.jaimeapp.pideseloajaime.gui;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -15,9 +14,6 @@ import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterPaquetes;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.PaquetesCategories;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class FragmentPaquetes extends Fragment {
 
     private RecyclerView.Adapter mAdapter;
@@ -26,9 +22,7 @@ public class FragmentPaquetes extends Fragment {
     private static int columns = 2;
 
     public FragmentPaquetes() {
-        // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,16 +35,10 @@ public class FragmentPaquetes extends Fragment {
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), columns));
         ArrayList<PaquetesCategories> myDataSet = new ArrayList<PaquetesCategories>();
 
-
-        PaquetesCategories paquete1 = new PaquetesCategories(getResources().getDrawable(R.drawable.icon_beerpack), "Paquete cerveza");
-        PaquetesCategories paquete2 = new PaquetesCategories(getResources().getDrawable(R.drawable.icon_sodapack), "Paquete Refresco");
-        PaquetesCategories paquete3 = new PaquetesCategories(getResources().getDrawable(R.drawable.icon_burgerpack), "Paquete Hamburguesa");
-        PaquetesCategories paquete4 = new PaquetesCategories(getResources().getDrawable(R.drawable.icon_cutlery), "Desechables");
-        myDataSet.add(paquete1);
-        myDataSet.add(paquete2);
-        myDataSet.add(paquete3);
-        myDataSet.add(paquete4);
-
+        myDataSet.add(new PaquetesCategories(getResources().getDrawable(R.drawable.icon_beerpack), "Paquete cerveza"));
+        myDataSet.add(new PaquetesCategories(getResources().getDrawable(R.drawable.icon_sodapack), "Paquete Refresco"));
+        myDataSet.add(new PaquetesCategories(getResources().getDrawable(R.drawable.icon_burgerpack), "Paquete Hamburguesa"));
+        myDataSet.add(new PaquetesCategories(getResources().getDrawable(R.drawable.icon_cutlery), "Desechables"));
 
         mAdapter = new AdapterPaquetes(getActivity(), myDataSet);
         recyclerView.setAdapter(mAdapter);

@@ -44,41 +44,23 @@ public class FragmentComida extends Fragment {
         mRecyclerFood.setLayoutManager(layoutManager);
         mRecyclerFood.setAdapter(mAdapterFood);
 
-        FoodCategories category1 = new FoodCategories("Papas Fritas", getResources().getDrawable(R.drawable.icon_chips));
-        FoodCategories category2 = new FoodCategories("Hamburguesas", getResources().getDrawable(R.drawable.icon_burguer));
-        FoodCategories category3 = new FoodCategories("Hot Dog", getResources().getDrawable(R.drawable.icon_hot_dog));
-        FoodCategories category4 = new FoodCategories("Carne", getResources().getDrawable(R.drawable.icon_steak));
-        FoodCategories category5 = new FoodCategories("Sandwich", getResources().getDrawable(R.drawable.icon_sandwich));
-        FoodCategories category6 = new FoodCategories("Frutas y Verduras", getResources().getDrawable(R.drawable.icon_frutas_vegetales));
-        FoodCategories category7 = new FoodCategories("Complementos", getResources().getDrawable(R.drawable.icon_ketchup));
-        FoodCategories category8 = new FoodCategories("Sushi", getResources().getDrawable(R.drawable.icon_sushi));
-        FoodCategories category9 = new FoodCategories("Pasta", getResources().getDrawable(R.drawable.icon_pasta));
-        FoodCategories category10 = new FoodCategories("Pizza", getResources().getDrawable(R.drawable.icon_pizza));
-        FoodCategories category11 = new FoodCategories("Comida China", getResources().getDrawable(R.drawable.icon_chinese_food));
-        FoodCategories category12 = new FoodCategories("Mariscos", getResources().getDrawable(R.drawable.icon_shrimp));
-        FoodCategories category13 = new FoodCategories("Ensaladas", getResources().getDrawable(R.drawable.icon_salad));
-        FoodCategories category14 = new FoodCategories("Kebab", getResources().getDrawable(R.drawable.icon_kebab));
-        FoodCategories category15 = new FoodCategories("Pastel", getResources().getDrawable(R.drawable.icon_cake));
-        FoodCategories category16 = new FoodCategories("Postre", getResources().getDrawable(R.drawable.icon_cupcake));
+        mFoodList.add(new FoodCategories("Papas Fritas", getResources().getDrawable(R.drawable.icon_chips)));
+        mFoodList.add(new FoodCategories("Hamburguesas", getResources().getDrawable(R.drawable.icon_burguer)));
+        mFoodList.add(new FoodCategories("Hot Dog", getResources().getDrawable(R.drawable.icon_hot_dog)));
+        mFoodList.add(new FoodCategories("Carne", getResources().getDrawable(R.drawable.icon_steak)));
+        mFoodList.add(new FoodCategories("Sandwich", getResources().getDrawable(R.drawable.icon_sandwich)));
+        mFoodList.add(new FoodCategories("Frutas y Verduras", getResources().getDrawable(R.drawable.icon_frutas_vegetales)));
+        mFoodList.add(new FoodCategories("Complementos", getResources().getDrawable(R.drawable.icon_ketchup)));
+        mFoodList.add(new FoodCategories("Sushi", getResources().getDrawable(R.drawable.icon_sushi)));
+        mFoodList.add(new FoodCategories("Pasta", getResources().getDrawable(R.drawable.icon_pasta)));
+        mFoodList.add(new FoodCategories("Pizza", getResources().getDrawable(R.drawable.icon_pizza)));
+        mFoodList.add(new FoodCategories("Comida China", getResources().getDrawable(R.drawable.icon_chinese_food)));
+        mFoodList.add(new FoodCategories("Mariscos", getResources().getDrawable(R.drawable.icon_shrimp)));
+        mFoodList.add(new FoodCategories("Ensaladas", getResources().getDrawable(R.drawable.icon_salad)));
+        mFoodList.add(new FoodCategories("Kebab", getResources().getDrawable(R.drawable.icon_kebab)));
+        mFoodList.add(new FoodCategories("Pastel", getResources().getDrawable(R.drawable.icon_cake)));
+        mFoodList.add(new FoodCategories("Postre", getResources().getDrawable(R.drawable.icon_cupcake)));
 
-
-
-        mFoodList.add(category1);
-        mFoodList.add(category2);
-        mFoodList.add(category3);
-        mFoodList.add(category4);
-        mFoodList.add(category5);
-        mFoodList.add(category6);
-        mFoodList.add(category7);
-        mFoodList.add(category8);
-        mFoodList.add(category9);
-        mFoodList.add(category10);
-        mFoodList.add(category11);
-        mFoodList.add(category12);
-        mFoodList.add(category13);
-        mFoodList.add(category14);
-        mFoodList.add(category15);
-        mFoodList.add(category16);
         return mRootView;
     }
 

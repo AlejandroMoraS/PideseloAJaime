@@ -1,6 +1,5 @@
 package mx.iteso.jaimeapp.pideseloajaime.AdapterClass;
 
-
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.Snackbar;
@@ -27,7 +26,6 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
     private ArrayList<Product> dataSet;
     private Context context;
 
-
     public AdapterProduct(Context context, ArrayList<Product> dataSet){
         this.dataSet = dataSet;
         this.context = context;
@@ -38,21 +36,21 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
         View view = LayoutInflater.from(parent.getContext()).inflate(product, parent, false);
         ViewHolder mviewHolder = new ViewHolder(view);
         return mviewHolder;
-
     }
+
     @Override
     public void onBindViewHolder(final AdapterProduct.ViewHolder holder, final int position) {
 
         final Product mproduct = dataSet.get(position);
 
         String productName = mproduct.getProductName();
-        String productPrice = mproduct.getProductPrice();
+        double productPrice = mproduct.getProductPrice();
         Drawable productImage = mproduct.getProductImage();
         Button productButton = mproduct.getProductButton();
 
         holder.productName.setText(productName);
 
-        holder.producPrice.setText(productPrice);
+        holder.productPrice.setText("$" + productPrice);
 
         holder.productImage.setImageDrawable(productImage);
 
@@ -60,58 +58,11 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
 
         ((ViewHolder)holder).productButton.setOnClickListener(new View.OnClickListener() {
 
-
-
             @Override
             public void onClick(View v){
                 Carrito.getInstance().addProduct(mproduct, 1);
                 Log.d("pppp", "onBindViewHolder: " + Carrito.getInstance().getCost());
-                switch (position){
-                    case 0:
-                        if (holder.productButton.getText() == "Agregar al carrito"){
-                            Toast.makeText(getApplicationContext(),"Producto añadido al carrito" + Carrito.getInstance().getCost(), Toast.LENGTH_SHORT).show();
-                            holder.productButton.setText("Agregado al Carrito");
-                            holder.productButton.setBackgroundResource(R.drawable.buttonstyle_gray);
-
-
-                        } else if (holder.productButton.getText() == "Agregado al Carrito"){
-                            Snackbar snack = Snackbar.make(v, "Este producto ya esta en tu carrito",Snackbar.LENGTH_SHORT);
-                            snack.setAction(R.string.undo_txt, new MyUndoListener());
-                            snack.show();
-                        }
-                        break;
-
-                    case 1:
-                        if (holder.productButton.getText() == "Agregar al carrito"){
-                            Toast.makeText(getApplicationContext(),"Producto añadido al carrito", Toast.LENGTH_SHORT).show();
-                            holder.productButton.setText("Agregado al Carrito");
-                            holder.productButton.setBackgroundResource(R.drawable.buttonstyle_gray);
-
-
-                        } else if (holder.productButton.getText() == "Agregado al Carrito"){
-                            Snackbar snack = Snackbar.make(v, "Este producto ya esta en tu carrito",Snackbar.LENGTH_SHORT);
-                            snack.setAction(R.string.undo_txt, new MyUndoListener());
-                            snack.show();
-                        }
-                        break;
-
-
-
-                    case 2:
-                        if (holder.productButton.getText() == "Agregar al carrito"){
-                            Toast.makeText(getApplicationContext(),"Producto añadido al carrito", Toast.LENGTH_SHORT).show();
-                            holder.productButton.setText("Agregado al Carrito");
-                            holder.productButton.setBackgroundResource(R.drawable.buttonstyle_gray);
-
-
-                        } else if (holder.productButton.getText() == "Agregado al Carrito"){
-                            Snackbar snack = Snackbar.make(v, "Este producto ya esta en tu carrito",Snackbar.LENGTH_SHORT);
-                            snack.setAction(R.string.undo_txt, new MyUndoListener());
-                            snack.show();
-                        }
-                        break;
-
-                }
+                Toast.makeText(getApplicationContext(),"Producto añadido al carrito" + Carrito.getInstance().getCost(), Toast.LENGTH_SHORT).show();
 
             }
 
@@ -154,14 +105,14 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView productName;
-        public TextView producPrice;
+        public TextView productPrice;
         public ImageView productImage;
         public Button productButton;
 
         public ViewHolder(View itemView) {
             super(itemView);
             productName = (TextView) itemView.findViewById(R.id.fragment_textName);
-            producPrice = (TextView) itemView.findViewById(R.id.fragment_textPrice);
+            productPrice = (TextView) itemView.findViewById(R.id.fragment_textPrice);
             productImage = (ImageView) itemView.findViewById(R.id.fragment_imageProduct);
             productButton = (Button) itemView.findViewById(R.id.boton_agregarCarrito);
 
