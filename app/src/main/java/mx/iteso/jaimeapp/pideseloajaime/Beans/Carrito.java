@@ -21,6 +21,10 @@ public class Carrito {
 
     }
 
+    public HashMap<Product, Integer> getProducts() {
+        return products;
+    }
+
     public void addProduct(Product product, int quantity) {
         if(products.get(product) != null) {
             products.put(product, products.get(product) + quantity);

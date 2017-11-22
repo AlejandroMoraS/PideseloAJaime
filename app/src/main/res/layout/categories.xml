@@ -31,6 +31,5 @@ card_view:cardCornerRadius="@dimen/categories_corner_radius">
         android:textSize="@dimen/categories_title_size"
         android:textStyle="bold"/>
 
-
 </LinearLayout>
 </android.support.v7.widget.CardView>
