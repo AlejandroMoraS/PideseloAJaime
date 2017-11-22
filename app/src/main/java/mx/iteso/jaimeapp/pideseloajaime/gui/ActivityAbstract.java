@@ -90,6 +90,10 @@ public abstract class ActivityAbstract extends AppCompatActivity implements Navi
         // Handle navigation view item clicks here.
         Intent intent;
         switch (item.getItemId()){
+            case R.id.sidebar_miCarrito:
+                intent = new Intent(this, ActivityCarrito.class);
+                startActivity(intent);
+                break;
             case R.id.sidebar_tienda:
                 intent = new Intent(this, ActivityTienda.class);
                 startActivity(intent);

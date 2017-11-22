@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.facebook.AccessToken;
@@ -52,6 +53,12 @@ public class ActivityNavigationDrawer extends AppCompatActivity
         goLoginScreen();
     }
 
+    private void onOpenCarrito() {
+        Intent intent = new Intent(this, ActivityCarrito.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -72,8 +79,12 @@ public class ActivityNavigationDrawer extends AppCompatActivity
         if (id == R.id.sidebar_tienda) {
             // Handle the camera action
         } else if (id == R.id.sidebar_miCarrito) {
+            Log.d("carrito", "onNavigationItemSelected: ");
+            onOpenCarrito();
         } else if (id == R.id.sidebar_misPedidos) {
+            Log.d("carrito", "onNavigationItemSelected: ");
         } else if (id == R.id.sidebar_miCuenta) {
+            Log.d("carrito", "onNavigationItemSelected: ");
         } else if (id == R.id.sidebar_cerrarSesion) {
             logout();
         } else if (id == R.id.nav_share) {

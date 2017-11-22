@@ -31,9 +31,6 @@ public class ActivityProfile extends ActivityAbstract {
     AccessTokenTracker accessTokenTracker;
     JSONObject user;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,7 +104,7 @@ public class ActivityProfile extends ActivityAbstract {
     private void updateUI() {
         if (AccessToken.getCurrentAccessToken() != null) {
             name.setTextColor(getColor(R.color.colorPrimary));
-           // name.setTextColor(getResources().getColor(R.color.colorPrimary));
+            //name.setTextColor(getResources().getColor(R.color.colorPrimary));
             //name.setShadowLayer(1f, 0f, -1f, getResources().getColor(R.color.colorPrimary));
             if (user != null) {
                 try {
