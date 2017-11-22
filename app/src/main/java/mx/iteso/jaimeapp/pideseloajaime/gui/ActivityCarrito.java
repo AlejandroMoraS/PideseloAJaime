@@ -1,7 +1,6 @@
 package mx.iteso.jaimeapp.pideseloajaime.gui;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.widget.TableLayout;
@@ -14,12 +13,14 @@ import mx.iteso.jaimeapp.pideseloajaime.Beans.Carrito;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-public class ActivityCarrito extends AppCompatActivity {
+public class ActivityCarrito extends ActivityAbstract {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carrito);
+        onCreateDrawer();
+
         HashMap<Product, Integer> products = Carrito.getInstance().getProducts();
         TableLayout tl = (TableLayout)findViewById(R.id.activity_carrito_table);
         for (Product p : products.keySet()) {

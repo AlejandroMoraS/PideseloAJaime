@@ -15,29 +15,35 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"></meta-data>
+            android:value="@string/facebook_app_id" />
 
         <activity
             android:name="com.facebook.FacebookActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity android:name=".ActivityMain" />
         <activity android:name=".gui.ActivityTienda">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".gui.ActivityNavigationDrawer"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ActivityLogin"></activity>
+        <activity android:name=".ActivityLogin" >
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+    </activity>
+
         <activity android:name=".gui.ActivityProfile" />
         <activity android:name=".gui.ActivityProductCerveza" />
         <activity android:name=".gui.ActivityProductComidas" />
         <activity android:name=".gui.ActivityProductPaquetes" />
-        <activity android:name=".gui.ActivityCarrito"></activity>
+        <activity android:name=".gui.ActivityCarrito" />
+        <activity android:name=".gui.ActivityMisPedidos"></activity>
     </application>
 
 </manifest>

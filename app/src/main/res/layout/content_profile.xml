@@ -117,14 +117,14 @@
                                 android:textSize="15sp" />
 
                             <TextView
+                                android:id="@+id/textView"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="10"
+                                android:text="20"
                                 android:textColor="@color/startblue"
                                 android:textSize="15dp"
-                                android:textStyle="bold"
 
-                                />
+                                android:textStyle="bold" />
 
 
                         </LinearLayout>
@@ -140,13 +140,13 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Reputación"
+                                android:text="Puntos Acumulados"
                                 android:textSize="15sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="95%"
+                                android:text="508"
                                 android:textColor="@color/startblue"
                                 android:textSize="15dp"
                                 android:textStyle="bold"

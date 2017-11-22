@@ -13,9 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.facebook.login.LoginManager;
-
 import mx.iteso.jaimeapp.pideseloajaime.ActivityLogin;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
@@ -93,6 +91,12 @@ public abstract class ActivityAbstract extends AppCompatActivity implements Navi
             case R.id.sidebar_miCarrito:
                 intent = new Intent(this, ActivityCarrito.class);
                 startActivity(intent);
+                finish();
+                break;
+            case R.id.sidebar_misPedidos:
+                intent = new Intent(this, ActivityMisPedidos.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.sidebar_tienda:
                 intent = new Intent(this, ActivityTienda.class);
