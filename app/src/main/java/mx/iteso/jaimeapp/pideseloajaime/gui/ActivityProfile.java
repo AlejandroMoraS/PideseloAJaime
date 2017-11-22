@@ -2,7 +2,6 @@ package mx.iteso.jaimeapp.pideseloajaime.gui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.widget.TextView;
 
@@ -18,7 +17,7 @@ import org.json.JSONObject;
 
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-public class ActivityProfile extends AppCompatActivity {
+public class ActivityProfile extends ActivityAbstract {
 
     private static final String NAME = "name";
     private static final String ID = "id";
@@ -42,6 +41,8 @@ public class ActivityProfile extends AppCompatActivity {
 
         callbackManager = CallbackManager.Factory.create();
         setContentView(R.layout.activity_profile);
+        onCreateDrawer();
+
         name = (TextView) findViewById(R.id.activity_profile_name);
         profilePicture = (ProfilePictureView) findViewById(R.id.activity_profile_picture);
 

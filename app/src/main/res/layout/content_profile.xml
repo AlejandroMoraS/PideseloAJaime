@@ -40,18 +40,16 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:background="@drawable/gradientbackground"
-                    android:orientation="vertical"
-                    >
+                    android:orientation="vertical">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true">
-
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true">
 
 
                         <com.facebook.login.widget.ProfilePictureView
@@ -59,33 +57,32 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center"
-                            android:layout_marginBottom="20dp"
-                         >
+                            android:layout_marginBottom="20dp">
 
                         </com.facebook.login.widget.ProfilePictureView>
 
                         <ImageView
-                            android:layout_marginBottom="20dp"
-                            android:layout_gravity="center"
                             android:id="@+id/android"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/substracted_circle"
-                            android:contentDescription="@null" />
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/substracted_circle" />
 
                         <TextView
                             android:id="@+id/activity_profile_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:lines="1"
                             android:layout_marginTop="55dp"
-                            android:textColor="#fff"
+                            android:lines="1"
+                            android:text="Prueba"
 
-                            android:textSize="21sp"
-                            android:textStyle="bold"
                             android:textAlignment="center"
-                            android:text="Prueba"/>
+                            android:textColor="#fff"
+                            android:textSize="21sp"
+                            android:textStyle="bold" />
 
                     </FrameLayout>
 
@@ -96,16 +93,14 @@
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="200dp"
-                    >
+                    android:layout_marginTop="200dp">
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:weightSum="2"
-                        >
+                        android:weightSum="2">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -113,7 +108,6 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:orientation="vertical">
-
 
 
                             <TextView

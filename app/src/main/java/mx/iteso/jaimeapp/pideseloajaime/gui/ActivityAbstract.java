@@ -93,6 +93,7 @@ public abstract class ActivityAbstract extends AppCompatActivity implements Navi
             case R.id.sidebar_tienda:
                 intent = new Intent(this, ActivityTienda.class);
                 startActivity(intent);
+                finish();
                 break;
             case R.id.sidebar_cerrarSesion:
                 logout();
@@ -100,6 +101,7 @@ public abstract class ActivityAbstract extends AppCompatActivity implements Navi
             case R.id.sidebar_miCuenta:
                 intent = new Intent(this, ActivityProfile.class);
                 startActivity(intent);
+                finish();
                 break;
         }
 
