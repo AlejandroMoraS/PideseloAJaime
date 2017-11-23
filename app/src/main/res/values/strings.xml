@@ -40,5 +40,6 @@
     <string name="agregadoCarrito_txt">Agregado al Carrito</string>
 
     <string name="undo_txt">Undo</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

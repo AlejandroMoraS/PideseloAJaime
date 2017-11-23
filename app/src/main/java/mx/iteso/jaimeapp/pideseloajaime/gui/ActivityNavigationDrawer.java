@@ -77,7 +77,6 @@ public class ActivityNavigationDrawer extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.sidebar_tienda) {
-            // Handle the camera action
         } else if (id == R.id.sidebar_miCarrito) {
             Log.d("carrito", "onNavigationItemSelected: ");
             onOpenCarrito();
