@@ -21,6 +21,10 @@ public class Carrito {
 
     }
 
+    public void removeProduct(Product p) {
+        products.remove(p);
+    }
+
     public HashMap<Product, Integer> getProducts() {
         return products;
     }
