@@ -1,3 +1,4 @@
+
 package mx.iteso.jaimeapp.pideseloajaime;
 
 import android.app.Activity;
@@ -37,6 +38,8 @@ import java.util.List;
 
 public class ActivityMaps extends AppCompatActivity implements OnMapReadyCallback {
 
+    private static final String DEBUG_TAG = "ActivityMaps";
+
     private GoogleMap mMap;
     Toolbar toolbar;
     private static final LatLng periferico = new LatLng(20.595629 ,-103.408062);
@@ -50,6 +53,8 @@ public class ActivityMaps extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        Log.d(DEBUG_TAG, "On Create");
 
         toolbar = (Toolbar) findViewById(R.id.toolbarProduct);
         setSupportActionBar(toolbar);
@@ -184,7 +189,7 @@ public class ActivityMaps extends AppCompatActivity implements OnMapReadyCallbac
 
             }
             catch (Exception e) {
-                Log.d("Exception while reading url", e.toString());
+                Log.d("Exception reading url", e.toString());
             } finally {
                 istream.close();
                 urlConnection.disconnect();

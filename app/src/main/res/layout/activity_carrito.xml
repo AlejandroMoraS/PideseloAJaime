@@ -15,7 +15,6 @@
     android:gravity="top"
     tools:context="mx.iteso.jaimeapp.pideseloajaime.gui.ActivityCarrito">
 
-
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,6 +60,12 @@
         </TableRow>
     </TableLayout>
 
+    <Button
+        android:id="@+id/activity_carrito_confirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar pedido"
+        android:onClick="onClick"/>
 </LinearLayout>
 
 <!--El navigation drawer para que aparezca el menu**************************************************************-->
