@@ -62,7 +62,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ViewHold
             public void onClick(View v){
                 Carrito.getInstance().addProduct(mproduct, 1);
                 Log.d("pppp", "onBindViewHolder: " + Carrito.getInstance().getCost());
-                Toast.makeText(getApplicationContext(),"Producto añadido al carrito" + Carrito.getInstance().getCost(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,"Producto añadido al carrito" + Carrito.getInstance().getCost(), Toast.LENGTH_SHORT).show();
 
             }
 

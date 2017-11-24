@@ -25,11 +25,11 @@ public class ActivityLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //MUST be included before load a VIEW that includes Facebook API
         FacebookSdk.sdkInitialize(this);
         callbackManager = CallbackManager.Factory.create();
-
+        //MUST be included before load a VIEW that includes Facebook API
         setContentView(R.layout.activity_login);
+
         loginButton = (LoginButton) findViewById(R.id.activity_login_button);
         loginButton.setReadPermissions(Arrays.asList("public_profile", "user_friends"));
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
