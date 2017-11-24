@@ -1,6 +1,7 @@
 package mx.iteso.jaimeapp.pideseloajaime.gui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 
 import java.util.HashMap;
 
+import mx.iteso.jaimeapp.pideseloajaime.ActivityLogin;
+import mx.iteso.jaimeapp.pideseloajaime.ActivityMaps;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Carrito;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
@@ -45,14 +48,13 @@ public class ActivityCarrito extends ActivityAbstract {
                     Carrito.getInstance().removeProduct(p);
                 }
             });
-            /*
-
-            TableRow tr = (TableRow)findViewById(R.id.activity_carrito_row);
-            TextView tv_product = tr.findViewById(R.id.activity_carrito_producto);
-            tv_product.setText(p.getProductName());
-            tl.addView(tr);
-            */
         }
 
+
+    }
+    public void onClick(View v) {
+        Intent intent = new Intent(ActivityCarrito.this, ActivityMaps.class);
+        startActivity(intent);
+        finish();
     }
 }
