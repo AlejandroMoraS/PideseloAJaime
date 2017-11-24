@@ -41,5 +41,10 @@
 
     <string name="undo_txt">Undo</string>
     <string name="title_activity_maps">Map</string>
+    <string name="pedir_orden">Continuar con pago</string>
+
+    <string name="tiempo">tiempo aproximado: 30 min</string>
+
+
 
 </resources>
