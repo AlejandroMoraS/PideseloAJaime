@@ -44,10 +44,10 @@ public class ActivityProductComidas extends AppCompatActivity{
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_sabritas), "Sabritas 35g", 13.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_rufles), "Rufles 400g", 40.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_sabritones), "Sabritones 260g", 25.50));
-        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_sabritasadobadas), "Sabritas Adobadas 35g", 13.50));
+        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_sabritasadobadas), "Sabritas Adob. 35g", 13.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_doritos), "Doritos Nacho 35g", 12.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_sabritaslimon), "Sabritas Limón 35g", 13.50));
-        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_paketaxo), "Paquetaxo Queso 213g", 30.50));
+        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_paketaxo), "Paquetaxo 213g", 30.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_cheetoshorneados), "Cheetos Pofs 270g", 30.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_comidas_cheetostorciditos), "Cheetos Torciditos 270g", 30.50));
 

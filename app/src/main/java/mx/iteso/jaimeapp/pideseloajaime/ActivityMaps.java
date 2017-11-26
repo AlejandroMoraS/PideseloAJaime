@@ -54,12 +54,14 @@ public class ActivityMaps extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        Log.d(DEBUG_TAG, "On Create");
-
         toolbar = (Toolbar) findViewById(R.id.toolbarProduct);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        Log.d(DEBUG_TAG, "On Create");
+
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
 
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());

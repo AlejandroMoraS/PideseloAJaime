@@ -12,7 +12,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -39,14 +38,13 @@
             android:name=".gui.ActivityNavigationDrawer"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ActivityLogin"></activity>
+        <activity android:name=".ActivityLogin" />
         <activity android:name=".gui.ActivityProfile" />
         <activity android:name=".gui.ActivityProductCerveza" />
         <activity android:name=".gui.ActivityProductComidas" />
         <activity android:name=".gui.ActivityProductPaquetes" />
         <activity android:name=".gui.ActivityCarrito" />
         <activity android:name=".gui.ActivityMisPedidos" />
-
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -62,9 +60,8 @@
 
         <activity
             android:name=".ActivityMaps"
-            android:label="@string/title_activity_maps">
-
-        </activity>
+            android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".ActivityFinalizarCompra"></activity>
     </application>
 
 </manifest>
