@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "866492215308",
+    "firebase_url": "https://pideseloajaime.firebaseio.com",
+    "project_id": "pideseloajaime",
+    "storage_bucket": "pideseloajaime.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866492215308:android:e18aed079689a867",
+        "android_client_info": {
+          "package_name": "mx.iteso.jaimeapp.pideseloajaime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866492215308-ugrp5779enp632eece2qhson5putnphf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.iteso.jaimeapp.pideseloajaime",
+            "certificate_hash": "44ddc38c2be43c08bcb9b47edace113187fa9a4c"
+          }
+        },
+        {
+          "client_id": "866492215308-9mlhau8curhkds0giqb75s52crtdvpsb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNk3puC3n0buhAQN7A9ppZwaoRJEuOgBw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866492215308-9mlhau8curhkds0giqb75s52crtdvpsb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
