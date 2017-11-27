@@ -44,7 +44,7 @@ public class ActivityProductBeerPack extends AppCompatActivity  {
         myDataSet.add( new Product(res.getDrawable(R.drawable.imagen_paquetes_tecate), "6x Tecate 355ml", 60.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_paquetes_indio), "6x Indio 355ml", 75.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_paquetes_heineken), "6x Heineken 355ml", 80.50));
-        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_paquetes_tecatelight), "6x Tecate Light 355ml", 60.50));
+        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_paquetes_tecatelight), "6x Tecate L 355ml", 60.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_paquetes_modelo), "6x Modelo 355ml", 70.50));
 
         mAdapter = new AdapterProduct(this, myDataSet);
