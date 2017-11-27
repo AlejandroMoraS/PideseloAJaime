@@ -13,7 +13,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:gravity="top"
-    tools:context="mx.iteso.jaimeapp.pideseloajaime.gui.ActivityCarrito">
+    tools:context="mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityCarrito">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -60,6 +60,11 @@
         </TableRow>
     </TableLayout>
 
+    <TextView
+        android:id="@+id/activity_carrito_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
     <Button
         android:id="@+id/activity_carrito_confirmar"
         android:layout_width="match_parent"

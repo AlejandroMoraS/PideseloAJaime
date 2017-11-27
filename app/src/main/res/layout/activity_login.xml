@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/deep_purple_50"
-    tools:context="mx.iteso.jaimeapp.pideseloajaime.ActivityLogin">
+    tools:context="mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityLogin">
 
 
     <com.facebook.login.widget.LoginButton

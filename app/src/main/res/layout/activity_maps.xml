@@ -32,7 +32,7 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mx.iteso.jaimeapp.pideseloajaime.ActivityMaps" />
+    tools:context="mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityMaps" />
 
 
         <TextView
@@ -51,7 +51,8 @@
             android:layout_height="100dp"
             android:text="@string/pedir_orden"
             android:background="@color/startblue"
-            android:textColor="#fff" />
+            android:textColor="#fff"
+            android:onClick="onClick"/>
 
 
 
