@@ -56,7 +56,6 @@ public class AdapterBeverages extends RecyclerView.Adapter<AdapterBeverages.Beve
         picture.setImageDrawable(categoryImage);
     }
 
-
     @Override
     public int getItemCount() {
         if (dataSet.isEmpty()) {

@@ -1,6 +1,7 @@
 package mx.iteso.jaimeapp.pideseloajaime.AdapterClass;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,6 +14,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import mx.iteso.jaimeapp.pideseloajaime.Beans.PacksCategories;
+import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductBeerPack;
+import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductSodaPack;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
 public class AdapterPacks extends RecyclerView.Adapter<AdapterPacks.PacksViewHolder> {
@@ -41,10 +44,10 @@ public class AdapterPacks extends RecyclerView.Adapter<AdapterPacks.PacksViewHol
         String PaquetesName = mpaquetes.getPackName();
         Drawable PaquetesImage = mpaquetes.getPackImage();
 
-        TextView name = holder.paquetesName;
+        TextView name = holder.packsName;
         name.setText(PaquetesName);
 
-        ImageView picture = holder.paquetesImage;
+        ImageView picture = holder.packsImage;
         picture.setImageDrawable(PaquetesImage);
     }
 
@@ -58,24 +61,47 @@ public class AdapterPacks extends RecyclerView.Adapter<AdapterPacks.PacksViewHol
     }
 
     public class PacksViewHolder extends RecyclerView.ViewHolder {
-        private ImageView paquetesImage;
-        private TextView paquetesName;
+        private ImageView packsImage;
+        private TextView packsName;
 
         public PacksViewHolder(View itemView) {
             super(itemView);
 
-            paquetesImage = itemView.findViewById(R.id.fragment_imageCategory);
-            paquetesName = itemView.findViewById(R.id.fragment_textCategory);
+            packsImage = itemView.findViewById(R.id.fragment_imageCategory);
+            packsName = itemView.findViewById(R.id.fragment_textCategory);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int requestCode = getAdapterPosition();
+                    Intent intent;
                     PacksCategories packsCategories = mPacksList.get(requestCode);
                     Log.d(DEBUG_TAG, "AdapterPacks itemView listener for adapter position: " + requestCode);
+                    switch (requestCode) {
+                        case 0:
+                            intent = new Intent(context, ActivityProductBeerPack.class);
+                            context.startActivity(intent);
+                            break;
+                        case 1:
+                            intent = new Intent(context, ActivityProductSodaPack.class);
+                            context.startActivity(intent);
+                            break;
+                        case 2:
+                            intent = new Intent(context, ActivityProductBeerPack.class);
+                            context.startActivity(intent);
+                            break;
+                        case 3:
+                            intent = new Intent(context, ActivityProductBeerPack.class);
+                            context.startActivity(intent);
+                            break;
+
+                    }
 
                 }
             });
+
+
+
 
         }
     }
