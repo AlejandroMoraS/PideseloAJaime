@@ -25,14 +25,14 @@ public class ActivityProductBeerPack extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_paquetes);
+        setContentView(R.layout.activity_product_beer_pack);
 
         toolbar = (Toolbar) findViewById(R.id.toolbarProduct);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.paquetesRecycler);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.beer_packs_recycler);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(this, columns));
