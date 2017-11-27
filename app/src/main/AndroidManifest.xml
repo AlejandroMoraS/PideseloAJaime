@@ -3,6 +3,7 @@
     package="mx.iteso.jaimeapp.pideseloajaime">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -69,7 +70,8 @@
         <activity android:name=".Gui.ActivityProductWines" />
         <activity android:name=".Gui.ActivityProductHamburger" />
         <activity android:name=".Gui.ActivityProductMeats" />
-        <activity android:name=".Gui.ActivityProductHotDogs"></activity>
+        <activity android:name=".Gui.ActivityProductHotDogs" />
+        <activity android:name=".Gui.ActivityProductSodaPack"></activity>
     </application>
 
 </manifest>

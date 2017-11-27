@@ -9,16 +9,11 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
-
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Calendar;
-import java.util.HashMap;
-
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Carrito;
-import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
 public class ActivityConfirm extends AppCompatActivity {

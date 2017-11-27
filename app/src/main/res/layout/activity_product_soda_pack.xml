@@ -24,16 +24,14 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
         </android.support.design.widget.AppBarLayout>
 
-
         <android.support.v7.widget.RecyclerView
             xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/paquetesRecycler"
+            android:id="@+id/soda_packs_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbarStyle="outsideOverlay"
             android:scrollbars="vertical"
             />
-
 
     </LinearLayout>
 

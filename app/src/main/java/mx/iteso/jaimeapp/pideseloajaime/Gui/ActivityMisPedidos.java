@@ -10,6 +10,9 @@ public class ActivityMisPedidos extends ActivityAbstract {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mis_pedidos);
+
+
+
         //Crea el botón del navigation drawer
         onCreateDrawer();
 

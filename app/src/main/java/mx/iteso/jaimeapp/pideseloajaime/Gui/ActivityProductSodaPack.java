@@ -1,14 +1,12 @@
 package mx.iteso.jaimeapp.pideseloajaime.Gui;
 
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 
 import java.util.ArrayList;
 
@@ -16,45 +14,39 @@ import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterProduct;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-public class ActivityProductSodas extends AppCompatActivity implements View.OnClickListener {
+public class ActivityProductSodaPack extends AppCompatActivity  {
 
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<Product> sodaDataSet;
+    private ArrayList<Product> myDataSet;
     private static int columns = 2;
     Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_sodas);
+        setContentView(R.layout.activity_product_soda_pack);
 
         toolbar = (Toolbar) findViewById(R.id.toolbarProduct);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.fragment_sodas_recycler);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.soda_packs_recycler);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(this, columns));
-        sodaDataSet = new ArrayList<Product>();
+        ArrayList<Product> sodaPacksDataSet = new ArrayList<Product>();
 
         Resources res = getResources();
-        sodaDataSet.add(new Product(res.getDrawable(R.drawable.imagen_refrescos_coca), "Coca Cola 3L", 25.00));
-        sodaDataSet.add(new Product(res.getDrawable(R.drawable.imagen_refrescos_coca_light), "Coca Cola Light 1.5L", 19.50));
-        sodaDataSet.add(new Product(res.getDrawable(R.drawable.imagen_refrescos_fanta), "Fanta 1.5L", 11.00));
-        sodaDataSet.add(new Product(res.getDrawable(R.drawable.imagen_refrescos_sidral), "Sidral 2L", 21.50));
-        sodaDataSet.add(new Product(res.getDrawable(R.drawable.imagen_refrescos_sprite), "Sprite 2L", 20.50));
-        sodaDataSet.add(new Product(res.getDrawable(R.drawable.imagen_refrescos_squirt), "Squirt 2L", 17.50));
+        sodaPacksDataSet.add(new Product(res.getDrawable(R.drawable.imagen_paquete_refrescos_fiesta_coca), "Fiesta Pack Coca Cola 8 pzas 2 L", 156.00));
+        sodaPacksDataSet.add(new Product(res.getDrawable(R.drawable.imagen_paquete_refrescos_familia_pepsi), "Refresco Pepsi Mix 6 pack 3 L", 132.00));
+        sodaPacksDataSet.add( new Product(res.getDrawable(R.drawable.imagen_paquete_refrescos_pepsi), "Refresco Pepsi 24 pzas 355 ml", 145.00));
+        sodaPacksDataSet.add(new Product(res.getDrawable(R.drawable.imagen_paquete_refrescos_lata), "Surtido Coca Cola 7 pzas 355 ml", 70.00));
+        sodaPacksDataSet.add(new Product(res.getDrawable(R.drawable.imagen_paquete_refrescos_squirt), "Refresco Squirt 6 pzas 3 L", 129.00));
 
-        mAdapter = new AdapterProduct(this, sodaDataSet);
+        mAdapter = new AdapterProduct(this, sodaPacksDataSet);
         recyclerView.setAdapter(mAdapter);
-    }
-
-    @Override
-    public void onClick(View v) {
-        Log.d("tag", "onClick: product?");
     }
 
     @Override
@@ -64,8 +56,6 @@ public class ActivityProductSodas extends AppCompatActivity implements View.OnCl
         if (id == android.R.id.home){
             this.finish();
         }
-        Log.d("tag", "onClick: product?");
         return super.onOptionsItemSelected(item);
     }
-
 }
