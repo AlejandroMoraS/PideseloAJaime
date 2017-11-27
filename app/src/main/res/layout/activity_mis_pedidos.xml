@@ -23,19 +23,51 @@
             android:background="@color/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
     </android.support.design.widget.AppBarLayout>
-        <!-- Toolbar para el navigationDrawer**************************************************************************************************************************-->
-        <!--Este sigue siendo un linear layout, puedes seguir trabajado aqui o agregar otro*********************************-->
+        <!-- Toolbar para el navigationDrawer -->
 
-              <TextView
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="Trabajar aqui "/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mis pedidos"/>
 
-          </LinearLayout>
+        <TableLayout
+            android:id="@+id/activity_mis_pedidos_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <TableRow
+                android:id="@+id/activity_mis_pedidos_row"
+                >
+                <TextView
+                    android:id="@+id/activity_mis_pedidos_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Fecha"
+                    />
+                <TextView
+                    android:id="@+id/activity_mis_pedidos_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="costo"
+                    />
+                <TextView
+                    android:id="@+id/activity_mis_pedidos_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Status"
+                    />
+            </TableRow>
 
-    <!--El navigation drawer para que aparezca el menu******************************************************************-->
+        </TableLayout>
+
+    </LinearLayout>
+
+    <!-- El navigation drawer para que aparezca el menu -->
           <android.support.design.widget.NavigationView
               android:id="@+id/nav_view"
               android:layout_width="wrap_content"

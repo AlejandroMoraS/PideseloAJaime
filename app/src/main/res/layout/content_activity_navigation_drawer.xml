@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="mx.iteso.jaimeapp.pideseloajaime.gui.ActivityNavigationDrawer"
+    tools:context="mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityNavigationDrawer"
     tools:showIn="@layout/app_bar_activity_navigation_drawer">
-
 
 </android.support.constraint.ConstraintLayout>

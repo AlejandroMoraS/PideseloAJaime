@@ -15,8 +15,7 @@ import java.util.ArrayList;
 
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Categories;
 import mx.iteso.jaimeapp.pideseloajaime.R;
-import mx.iteso.jaimeapp.pideseloajaime.gui.ActivityProductCerveza;
-
+import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductBeer;
 
 public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.ViewHolder> implements View.OnClickListener{
     private ArrayList<Categories> dataSet;
@@ -55,7 +54,7 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
                 Intent intent;
                 switch (position){
                     case 0:
-                        intent = new Intent(v.getContext(), ActivityProductCerveza.class);
+                        intent = new Intent(v.getContext(), ActivityProductBeer.class);
                         context.startActivity(intent);
                         break;
                     case 1: Toast.makeText(context, "Diste click a la posición " +
@@ -71,7 +70,6 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
 
 
     }
-
 
     @Override
     public int getItemCount() {

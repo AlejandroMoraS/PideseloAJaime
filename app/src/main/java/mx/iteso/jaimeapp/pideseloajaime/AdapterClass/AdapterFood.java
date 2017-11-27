@@ -14,9 +14,11 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import mx.iteso.jaimeapp.pideseloajaime.Beans.FoodCategories;
-import mx.iteso.jaimeapp.pideseloajaime.Beans.Product;
+import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductHamburger;
+import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductHotDogs;
+import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductMeats;
 import mx.iteso.jaimeapp.pideseloajaime.R;
-import mx.iteso.jaimeapp.pideseloajaime.gui.ActivityProductComidas;
+import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductChips;
 
 public class AdapterFood extends RecyclerView.Adapter<AdapterFood.FoodViewholder> {
     private Context context;
@@ -58,14 +60,24 @@ public class AdapterFood extends RecyclerView.Adapter<AdapterFood.FoodViewholder
                 Intent intent;
                 switch (position){
                     case 0:
-                        intent = new Intent(v.getContext(), ActivityProductComidas.class);
+                        intent = new Intent(v.getContext(), ActivityProductChips.class);
                         context.startActivity(intent);
                         break;
-                    case 1: Toast.makeText(context, "Diste click a la posición " +
-                            position, Toast.LENGTH_SHORT).show();
+                    case 1:
+                        intent = new Intent(v.getContext(), ActivityProductHamburger.class);
+                        context.startActivity(intent);
                         break;
-                    case 2: Toast.makeText(context, "Diste click a la posición " +
-                            position, Toast.LENGTH_SHORT).show();
+                    case 2:
+                        intent = new Intent(v.getContext(), ActivityProductHotDogs.class);
+                        context.startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(v.getContext(), ActivityProductMeats.class);
+                        context.startActivity(intent);
+                        break;
+                    case 4:
+                        intent = new Intent(v.getContext(), ActivityProductHamburger.class);
+                        context.startActivity(intent);
                         break;
                 }
 
