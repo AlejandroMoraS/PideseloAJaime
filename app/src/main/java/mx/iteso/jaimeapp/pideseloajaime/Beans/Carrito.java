@@ -18,7 +18,6 @@ public class Carrito {
             carrito = new Carrito();
         }
         return carrito;
-
     }
 
     public void removeProduct(Product p) {
@@ -61,8 +60,8 @@ public class Carrito {
         return quantity;
     }
 
-    public void setQuantity(int quantify) {
-        this.quantity = quantify;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
 }
