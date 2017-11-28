@@ -2,11 +2,13 @@ package mx.iteso.jaimeapp.pideseloajaime.Gui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -39,7 +41,7 @@ public class ActivityCarrito extends ActivityAbstract {
 
             tl.addView(rowView);
 
-            Button btn = (Button)rowView.getChildAt(3);
+            ImageButton btn = (ImageButton)rowView.getChildAt(3);
             btn.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View v) {
                     tl.removeView(rowView);

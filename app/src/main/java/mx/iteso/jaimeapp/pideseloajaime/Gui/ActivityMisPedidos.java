@@ -53,7 +53,6 @@ public class ActivityMisPedidos extends ActivityAbstract {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                        //mTxtDisplay.setText("Response: " + response.toString());
                         try {
 
                             JSONArray items = (JSONArray)response.get("items");
