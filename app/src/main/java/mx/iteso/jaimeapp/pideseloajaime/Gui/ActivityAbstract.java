@@ -91,6 +91,7 @@ public abstract class ActivityAbstract extends AppCompatActivity implements Navi
             case R.id.sidebar_miCarrito:
                 intent = new Intent(this, ActivityCarrito.class);
                 startActivity(intent);
+                finish();
                 break;
             case R.id.sidebar_misPedidos:
                 intent = new Intent(this, ActivityMisPedidos.class);
@@ -104,6 +105,7 @@ public abstract class ActivityAbstract extends AppCompatActivity implements Navi
                 break;
             case R.id.sidebar_cerrarSesion:
                 logout();
+                finish();
                 break;
             case R.id.sidebar_miCuenta:
                 intent = new Intent(this, ActivityProfile.class);
@@ -116,5 +118,4 @@ public abstract class ActivityAbstract extends AppCompatActivity implements Navi
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 }
