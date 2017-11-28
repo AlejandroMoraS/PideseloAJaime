@@ -46,12 +46,12 @@ public class ActivityProductBeer extends AppCompatActivity implements View.OnCli
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_heineken), "Heineken \n355 ml", 15.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_sol), "Sol \n355 ml", 10.50));
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_indio), "Indio \n355 ml", 10.00));
-        //myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_budweiser), "Budweiser \n355 ml", 12.50));
-        //myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_stella), "Stella \n355 ml", 11.50));
-        //myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_minerva), "Minerva \n355 ml", 13.50));
-        //myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_samuel_adams), "Samuel Adams \n355 ml", 12.50));
-        //myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_budlight), "Bud Light \n355 ml", 10.50));
-        //myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_modelo), "Modelo Oscura 355 ml", 13.00));
+        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_budweiser), "Budweiser \n355 ml", 12.50));
+        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_stella), "Stella \n355 ml", 11.50));
+        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_minerva), "Minerva \n355 ml", 13.50));
+        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_samuel_adams), "Samuel Adams \n355 ml", 12.50));
+        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_budlight), "Bud Light \n355 ml", 10.50));
+        myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_cervezas_modelo), "Modelo Oscura 355 ml", 13.00));
 
         mAdapter = new AdapterProduct(this, myDataSet);
         recyclerView.setAdapter(mAdapter);
