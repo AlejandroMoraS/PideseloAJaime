@@ -9,16 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import mx.iteso.jaimeapp.pideseloajaime.Beans.FoodCategories;
+import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductChips;
 import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductHamburger;
 import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductHotDogs;
 import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductMeats;
 import mx.iteso.jaimeapp.pideseloajaime.R;
-import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductChips;
 
 public class AdapterFood extends RecyclerView.Adapter<AdapterFood.FoodViewholder> {
     private Context context;

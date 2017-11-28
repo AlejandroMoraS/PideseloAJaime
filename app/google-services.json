@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "866492215308-k7imiv7uegfv2h2qbu2543ckd940nogl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.iteso.jaimeapp.pideseloajaime",
+            "certificate_hash": "d2c2b8b0be439766d592b14e9f85bf8df9e9d4f9"
+          }
+        },
+        {
           "client_id": "866492215308-ugrp5779enp632eece2qhson5putnphf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

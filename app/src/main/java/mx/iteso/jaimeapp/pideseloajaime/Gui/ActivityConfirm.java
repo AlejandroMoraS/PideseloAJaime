@@ -1,18 +1,19 @@
 package mx.iteso.jaimeapp.pideseloajaime.Gui;
 
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.TableLayout;
 import android.widget.TextView;
 
 import org.json.JSONObject;
+
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Calendar;
+
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Carrito;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
