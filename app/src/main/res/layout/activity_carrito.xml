@@ -28,17 +28,22 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </android.support.design.widget.AppBarLayout>
-    <!-- Toolbar para el navigationDrawer**************************************************************************************************************************-->
-
+    <!-- Toolbar para el navigationDrawer -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Carrito de Compra"/>
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:text="Carrito de Compra"
+        android:textStyle="bold"
+        android:layout_margin="10dp"/>
 
     <TableLayout
         android:id="@+id/activity_carrito_table"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
         <TableRow
             android:id="@+id/activity_carrito_row"
             >
@@ -46,34 +51,78 @@
                 android:id="@+id/activity_carrito_producto"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="nombre"
+                android:layout_weight=".4"
+                android:textColor="@color/startblue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Producto"
                 />
             <TextView
                 android:id="@+id/activity_carrito_costo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".2"
-                android:text="costo"
+                android:layout_weight=".3"
+                android:textColor="@color/startblue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Precio"
                 />
-
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
         </TableRow>
     </TableLayout>
 
-    <TextView
-        android:id="@+id/activity_carrito_total"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <Button
-        android:id="@+id/activity_carrito_confirmar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Confirmar pedido"
-        android:onClick="onClick"/>
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_gravity="bottom">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TableRow
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Total: $ "
+                    />
+                <TextView
+                    android:id="@+id/activity_carrito_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:id="@+id/activity_carrito_confirmar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/startblue"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:text="Confirmar pedido"
+            android:onClick="onClick"
+            />
+    </LinearLayout>
+
 </LinearLayout>
 
-<!--El navigation drawer para que aparezca el menu**************************************************************-->
+<!-- El navigation drawer para que aparezca el menu -->
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
