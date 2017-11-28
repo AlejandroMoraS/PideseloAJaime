@@ -46,7 +46,7 @@ public class ActivityProductJuices extends AppCompatActivity implements View.OnC
         juicesDataSet.add(new Product(res.getDrawable(R.drawable.imagen_jugos_mango), "Jumex Mango \n1 L", 20.00));
         juicesDataSet.add(new Product(res.getDrawable(R.drawable.imagen_jugos_manzana), "Jumex Manzana \n1 L", 20.00));
         juicesDataSet.add(new Product(res.getDrawable(R.drawable.imagen_jugos_pinia), "Jumex Piña \n1 L", 20.00));
-        juicesDataSet.add(new Product(res.getDrawable(R.drawable.imagen_jugos_tomate), "Jumex Tomate \n1 L", 20.00));
+        //juicesDataSet.add(new Product(res.getDrawable(R.drawable.imagen_jugos_tomate), "Jumex Tomate \n1 L", 20.00));
 
         mAdapter = new AdapterProduct(this, juicesDataSet);
         recyclerView.setAdapter(mAdapter);

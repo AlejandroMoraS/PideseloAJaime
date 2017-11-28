@@ -30,37 +30,33 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mis pedidos"/>
-
-        <TextView
-            android:id="@+id/tvIsConnected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="is connected?"
-            />
-
-        <EditText
-            android:id="@+id/etResponse"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:inputType="textMultiLine" />
-
-
-
+            android:layout_margin="10dp"
+            android:text="Mis pedidos"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
 
         <TableLayout
             android:id="@+id/activity_mis_pedidos_table"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
             <TableRow
                 android:id="@+id/activity_mis_pedidos_row"
+                android:gravity="top"
+                android:layout_marginTop="10dp"
+                android:layout_margin="10dp">
                 >
                 <TextView
                     android:id="@+id/activity_mis_pedidos_date"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".3"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
                     android:text="Fecha"
                     />
                 <TextView
@@ -68,13 +64,19 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".3"
-                    android:text="costo"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="Total"
                     />
                 <TextView
                     android:id="@+id/activity_mis_pedidos_status"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".3"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
                     android:text="Status"
                     />
             </TableRow>
