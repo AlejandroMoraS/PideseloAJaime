@@ -14,10 +14,6 @@ import mx.iteso.jaimeapp.pideseloajaime.AdapterClass.AdapterFood;
 import mx.iteso.jaimeapp.pideseloajaime.Beans.FoodCategories;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class FragmentComida extends Fragment {
 
     private RecyclerView mRecyclerFood;

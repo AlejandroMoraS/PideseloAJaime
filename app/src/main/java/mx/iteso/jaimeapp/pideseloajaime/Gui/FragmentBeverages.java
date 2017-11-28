@@ -19,7 +19,6 @@ public class FragmentBeverages extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<BeverageCategories> myDataSet;
-    // private ArrayList<Categories> myDataSet;
     private static int columns = 2;
 
     public FragmentBeverages() {

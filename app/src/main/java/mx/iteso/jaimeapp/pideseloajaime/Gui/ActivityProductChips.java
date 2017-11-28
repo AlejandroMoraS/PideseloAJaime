@@ -38,7 +38,7 @@ public class ActivityProductChips extends AppCompatActivity{
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(this, columns));
-        ArrayList<Product> myDataSet = new ArrayList<Product>();
+        myDataSet = new ArrayList<Product>();
 
         Resources res = getResources();
         myDataSet.add(new Product(res.getDrawable(R.drawable.imagen_papas_sabritas), "Sabritas 35g", 13.50));

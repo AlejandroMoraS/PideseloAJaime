@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 
 import com.facebook.FacebookSdk;
 
@@ -14,12 +15,15 @@ import java.util.Locale;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 public class ActivityTienda extends ActivityAbstract {
 
+    private static final String DEBUG_TAG = "ActivityTienda";
+
     private TabLayout tabLayout;
     private ViewPager viewPager;
     SectionsPagerAdapter mSectionsPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(DEBUG_TAG, "OnCreate");
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(this);
         setContentView(R.layout.activity_tienda);

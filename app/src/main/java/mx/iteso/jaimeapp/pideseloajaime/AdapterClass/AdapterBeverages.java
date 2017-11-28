@@ -83,8 +83,6 @@ public class AdapterBeverages extends RecyclerView.Adapter<AdapterBeverages.Beve
                     BeverageCategories beverageCategories = dataSet.get(requestCode);
                     Log.d(DEBUG_TAG, "AdapterBeverages itemView listener for adapter position: " + requestCode);
                     String beverageName = beverageCategories.getBeverageName();
-                    Bundle bundle = new Bundle();
-                    bundle.putString("beverage_name", beverageName);
 
                     switch (requestCode) {
                         case 0:
