@@ -42,8 +42,8 @@ public class ActivityProfile extends ActivityAbstract {
 
         name = (TextView) findViewById(R.id.activity_profile_name);
         profilePicture = (ProfilePictureView) findViewById(R.id.activity_profile_picture);
-
         accessTokenTracker = new AccessTokenTracker() {
+
             @Override
             protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
                 if(AccessToken.getCurrentAccessToken() == null) {
@@ -57,7 +57,6 @@ public class ActivityProfile extends ActivityAbstract {
                 }
             }
         };
-
 
     }
 

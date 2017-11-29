@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,9 @@ import mx.iteso.jaimeapp.pideseloajaime.Gui.ActivityProductMeats;
 import mx.iteso.jaimeapp.pideseloajaime.R;
 
 public class AdapterFood extends RecyclerView.Adapter<AdapterFood.FoodViewholder> {
+
+    private static final String DEBUG_TAG = "AdapterFood";
+
     private Context context;
     private ArrayList<FoodCategories> mFoodList;
 
@@ -59,6 +63,8 @@ public class AdapterFood extends RecyclerView.Adapter<AdapterFood.FoodViewholder
                 Intent intent;
                 switch (position){
                     case 0:
+                        Log.d(DEBUG_TAG, "Click en adaptador comida");
+
                         intent = new Intent(v.getContext(), ActivityProductChips.class);
                         context.startActivity(intent);
                         break;

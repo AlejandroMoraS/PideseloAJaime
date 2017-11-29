@@ -1,11 +1,13 @@
 package mx.iteso.jaimeapp.pideseloajaime.Gui;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -16,6 +18,8 @@ import java.util.Calendar;
 
 import mx.iteso.jaimeapp.pideseloajaime.Beans.Carrito;
 import mx.iteso.jaimeapp.pideseloajaime.R;
+
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class ActivityConfirm extends AppCompatActivity {
 
@@ -34,7 +38,6 @@ public class ActivityConfirm extends AppCompatActivity {
 }
 
 class AsyncRequest extends AsyncTask<Object, Object, Void> {
-
     private Exception exception;
 
     protected Void doInBackground(Object... urls) {
@@ -60,5 +63,11 @@ class AsyncRequest extends AsyncTask<Object, Object, Void> {
             Log.d("ventas", "onClick: ventas" + e);
         }
         return null;
+    }
+
+    @Override
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
+        Toast.makeText(getApplicationContext(), "Tu pedido se ha realizado con éxito", Toast.LENGTH_LONG).show();
     }
 }
