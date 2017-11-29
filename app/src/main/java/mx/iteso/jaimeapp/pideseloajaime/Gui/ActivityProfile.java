@@ -102,7 +102,7 @@ public class ActivityProfile extends ActivityAbstract {
     @SuppressWarnings("deprecation")
     private void updateUI() {
         if (AccessToken.getCurrentAccessToken() != null) {
-            name.setTextColor(getResources().getColor(R.color.colorPrimary));
+            name.setTextColor(getResources().getColor(R.color.white));
             //name.setTextColor(getResources().getColor(R.color.colorPrimary));
             name.setShadowLayer(1f, 0f, -1f, getResources().getColor(R.color.colorPrimary));
             if (user != null) {

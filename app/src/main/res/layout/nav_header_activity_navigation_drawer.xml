@@ -20,14 +20,16 @@
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:srcCompat="@drawable/logo" />
 
+
     <TextView
-        android:id="@+id/nombre_usuario"
+        android:id="@+id/activity_profile_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nombre_usuario_txt"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:text="Prueba"
+       />
 
     <TextView
         android:id="@+id/correo_electronico"

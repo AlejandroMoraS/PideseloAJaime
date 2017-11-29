@@ -6,8 +6,16 @@
 
     <color name="colorPrimaryDark2">#292b3f</color>
     <color name="graylight">#fafafa</color>
-    <color name="startblue">#008ED8</color>
-    <color name="endblue">#008ED8</color>
+    <!--
+    BLUE
+      <color name="startblue">#008ED8</color>
+      -->
+
+    <color name="startblue">#FFC13A</color>
+    <color name="endblue">#FFC13A</color>
+
+
+    <color name="stargray">#2E2E2E</color>
 
     <color name="gray">#AAAAAA</color>
     <color name="black">#000000</color>
