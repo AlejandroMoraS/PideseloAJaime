@@ -41,12 +41,15 @@
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Gui.ActivityLogin" />
-        <activity android:name=".Gui.ActivityProfile" />
+        <activity android:name=".Gui.ActivityProfile"
+            android:label="Mi Cuenta"></activity>
         <activity android:name=".Gui.ActivityProductBeer" />
         <activity android:name=".Gui.ActivityProductChips" />
         <activity android:name=".Gui.ActivityProductBeerPack" />
-        <activity android:name=".Gui.ActivityCarrito" />
-        <activity android:name=".Gui.ActivityMisPedidos" />
+        <activity android:name=".Gui.ActivityCarrito"
+            android:label="Carrito"></activity>
+        <activity android:name=".Gui.ActivityMisPedidos"
+            android:label="Historial"></activity>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

@@ -39,6 +39,12 @@
         android:textStyle="bold"
         android:layout_margin="10dp"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
     <TableLayout
         android:id="@+id/activity_carrito_table"
         android:layout_width="match_parent"
@@ -75,14 +81,18 @@
                 android:textSize="18sp"
                 />
         </TableRow>
+
+
     </TableLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="10dp"
-        android:layout_gravity="bottom">
+        >
 
         <TableLayout
             android:layout_width="match_parent"
@@ -106,7 +116,9 @@
                     android:textSize="20sp"
                     />
             </TableRow>
+
         </TableLayout>
+
         <Button
             android:id="@+id/activity_carrito_confirmar"
             android:layout_width="match_parent"
@@ -118,7 +130,9 @@
             android:text="Confirmar pedido"
             android:onClick="onClick"
             />
-    </LinearLayout>
+</LinearLayout>
+
+
 
 </LinearLayout>
 

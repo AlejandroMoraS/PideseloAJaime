@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,18 +39,27 @@
             android:textColor="@color/black"
             android:textAlignment="center"/>
 
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
         <TableLayout
             android:id="@+id/activity_mis_pedidos_table"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            >
+
+
 
             <TableRow
                 android:id="@+id/activity_mis_pedidos_row"
                 android:gravity="top"
                 android:layout_marginTop="10dp"
                 android:layout_margin="10dp">
-                >
+
+
                 <TextView
                     android:id="@+id/activity_mis_pedidos_date"
                     android:layout_width="0dp"
@@ -79,12 +90,16 @@
                     android:textStyle="bold"
                     android:text="Status"
                     />
+
+
             </TableRow>
 
         </TableLayout>
 
-    </LinearLayout>
 
+    </ScrollView>
+
+</LinearLayout>
     <!-- El navigation drawer para que aparezca el menu -->
           <android.support.design.widget.NavigationView
               android:id="@+id/nav_view"
