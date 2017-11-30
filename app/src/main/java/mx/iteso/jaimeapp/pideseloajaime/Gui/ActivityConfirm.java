@@ -40,6 +40,7 @@ public class ActivityConfirm extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), ActivityTienda.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                android.os.Process.killProcess(android.os.Process.myPid());
             }
         });
 
